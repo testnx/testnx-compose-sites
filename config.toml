@@ -1,0 +1,19 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+theme = "compose"
+
+[outputs]
+  home = ["HTML", "RSS","JSON"]
+
+#  menu items
+[[menu.main]]
+    name = "Docs"
+    weight = 1
+    url = "docs/"
+
+[[menu.main]]
+    name = "Markdown"
+    weight = 2
+    url = "markdown/"
