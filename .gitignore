@@ -6,8 +6,3 @@
 /.buildpath
 /.settings/
 
-# hugo cache files #
-####################
-public/
-.hugo_build.lock
-
