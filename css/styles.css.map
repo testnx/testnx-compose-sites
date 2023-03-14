@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "C:/MikeHome/dev/vs-code/workspace/hugo/testnx-compose-sites",
+	"sourceRoot": "C:/MikeHome/dev/vs-code/workspace/hugo/hugo-compose-testnx",
 	"sources": [
 		"themes/compose/assets/sass/main.sass",
 		"themes/compose/assets/sass/_variables.sass",

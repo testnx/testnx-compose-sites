@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Themes&#39; Docs on My New Hugo Site</title>
+    <title>Themes&#39; Docs on TestNX: A new way for testing</title>
     <link>/docs/</link>
-    <description>Recent content in Themes&#39; Docs on My New Hugo Site</description>
+    <description>Recent content in Themes&#39; Docs on TestNX: A new way for testing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,9 @@
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/docs/emoji-support/</guid>
-      <description>Emoji can be enabled in a Hugo project in a number of ways.</description>
+      <description>cat1 Emoji can be enabled in a Hugo project in a number of ways.
+cat2 Emoji can be enabled in a Hugo project in a number of ways.
+cat3 Emoji can be enabled in a Hugo project in a number of ways.</description>
     </item>
     
   </channel>
