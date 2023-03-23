@@ -2,17 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/markdown/how-to-use-title/</loc>
+    <loc>/at-dashboard/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/markdown/</loc>
+    <loc>/at-dashboard/how-to-use-title/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>/composite-automation-harness/</loc>
   </url><url>
-    <loc>/markdown/how-to-use-editor/</loc>
+    <loc>/at-dashboard/how-to-use-editor/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/composite-automation-harness/install/</loc>
   </url><url>
     <loc>/categories/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
@@ -35,7 +36,8 @@
     <loc>/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>/tags/at/</loc>
+  </url><url>
+    <loc>/categories/cah/</loc>
   </url>
 </urlset>

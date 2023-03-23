@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website Home on TestNX: A new way for testing</title>
+    <title>WebSite Home on TestNX</title>
     <link>/</link>
-    <description>Recent content in Website Home on TestNX: A new way for testing</description>
+    <description>Recent content in WebSite Home on TestNX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use title</title>
-      <link>/markdown/how-to-use-title/</link>
+      <link>/at-dashboard/how-to-use-title/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>/markdown/how-to-use-title/</guid>
+      <guid>/at-dashboard/how-to-use-title/</guid>
       <description>First part this is content for First part
 1.1 this is content
 this is content
@@ -27,10 +27,10 @@ Second part this is content for Second part
     
     <item>
       <title>How to use editor</title>
-      <link>/markdown/how-to-use-editor/</link>
+      <link>/at-dashboard/how-to-use-editor/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>/markdown/how-to-use-editor/</guid>
+      <guid>/at-dashboard/how-to-use-editor/</guid>
       <description>First part this is content for First part
 1.1 this is content
 this is content
@@ -44,14 +44,12 @@ Second part this is content for Second part
     </item>
     
     <item>
-      <title>Emoji Support</title>
-      <link>/docs/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Install and setup</title>
+      <link>/composite-automation-harness/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/emoji-support/</guid>
-      <description>cat1 Emoji can be enabled in a Hugo project in a number of ways.
-cat2 Emoji can be enabled in a Hugo project in a number of ways.
-cat3 Emoji can be enabled in a Hugo project in a number of ways.</description>
+      <guid>/composite-automation-harness/install/</guid>
+      <description> Install JDK8+ or OpenJDK8+ Install Maven3+ Add the composite-automation-harness dependency to your maven project &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
   </channel>

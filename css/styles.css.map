@@ -3,17 +3,17 @@
 	"file": "styles.css",
 	"sourceRoot": "C:/MikeHome/dev/vs-code/workspace/hugo/hugo-compose-testnx",
 	"sources": [
-		"themes/compose/assets/sass/main.sass",
-		"themes/compose/assets/sass/_variables.sass",
-		"themes/compose/assets/sass/_base.sass",
-		"themes/compose/assets/sass/_nav.sass",
-		"themes/compose/assets/sass/_components.sass",
-		"themes/compose/assets/sass/_blog.sass",
-		"themes/compose/assets/sass/_utils.sass",
-		"themes/compose/assets/sass/_syntax.sass",
-		"themes/compose/assets/sass/_fonts.sass",
-		"themes/compose/assets/sass/_chart.sass",
-		"themes/compose/assets/sass/_custom.sass"
+		"themes/my-compose/assets/sass/main.sass",
+		"themes/my-compose/assets/sass/_variables.sass",
+		"themes/my-compose/assets/sass/_base.sass",
+		"themes/my-compose/assets/sass/_nav.sass",
+		"themes/my-compose/assets/sass/_components.sass",
+		"themes/my-compose/assets/sass/_blog.sass",
+		"themes/my-compose/assets/sass/_utils.sass",
+		"themes/my-compose/assets/sass/_syntax.sass",
+		"themes/my-compose/assets/sass/_fonts.sass",
+		"themes/my-compose/assets/sass/_chart.sass",
+		"themes/my-compose/assets/sass/_custom.sass"
 	],
 	"sourcesContent": [
 		"\nhtml {\n  --info-icon: url('/icons/info.svg');\n  --sun-icon: url('/icons/sun.svg');\n  --moon-icon: url('/icons/moon.svg');\n  --next-icon: url('/icons/next.svg'); }\n@import \"variables\";\n@import \"base\";\n@import \"nav\";\n@import \"components\";\n@import \"blog\";\n@import \"utils\";\n@import \"syntax\";\n@import \"fonts\";\n@import \"chart\";\n@import \"custom\";\n",

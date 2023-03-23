@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cah on TestNX</title>
+    <link>/categories/cah/</link>
+    <description>Recent content in cah on TestNX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/categories/cah/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and setup</title>
+      <link>/composite-automation-harness/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/composite-automation-harness/install/</guid>
+      <description> Install JDK8+ or OpenJDK8+ Install Maven3+ Add the composite-automation-harness dependency to your maven project &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
+    </item>
+    
+  </channel>
+</rss>

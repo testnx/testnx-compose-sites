@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>N2 on TestNX: A new way for testing</title>
+    <title>N2 on TestNX</title>
     <link>/categories/n2/</link>
-    <description>Recent content in N2 on TestNX: A new way for testing</description>
+    <description>Recent content in N2 on TestNX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="/categories/n2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use title</title>
-      <link>/markdown/how-to-use-title/</link>
+      <link>/at-dashboard/how-to-use-title/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>/markdown/how-to-use-title/</guid>
+      <guid>/at-dashboard/how-to-use-title/</guid>
       <description>First part this is content for First part
 1.1 this is content
 this is content
@@ -27,10 +27,10 @@ Second part this is content for Second part
     
     <item>
       <title>How to use editor</title>
-      <link>/markdown/how-to-use-editor/</link>
+      <link>/at-dashboard/how-to-use-editor/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>/markdown/how-to-use-editor/</guid>
+      <guid>/at-dashboard/how-to-use-editor/</guid>
       <description>First part this is content for First part
 1.1 this is content
 this is content
