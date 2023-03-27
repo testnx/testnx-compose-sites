@@ -2,42 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/at-dashboard/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/at-dashboard/how-to-use-title/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/composite-automation-harness/</loc>
   </url><url>
-    <loc>/at-dashboard/how-to-use-editor/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+    <loc>/at-dashboard/</loc>
   </url><url>
     <loc>/composite-automation-harness/install/</loc>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+    <loc>/composite-automation-harness/integration/</loc>
   </url><url>
-    <loc>/categories/n1/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+    <loc>/composite-automation-harness/quickstart/</loc>
   </url><url>
-    <loc>/categories/n2/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/pop/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tech/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+    <loc>/composite-automation-harness/manual/</loc>
   </url><url>
     <loc>/tags/at/</loc>
   </url><url>
     <loc>/categories/cah/</loc>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/tags/</loc>
+  </url><url>
+    <loc>/tags/tech/</loc>
+  </url><url>
+    <loc>/</loc>
   </url>
 </urlset>

@@ -14,18 +14,18 @@
 <link rel="shortcut icon" href='/favicons/favicon.ico'>
 <meta name="msapplication-config" content='/favicons/browserconfig.xml'>
 <title>Install and setup | TestNX</title><meta property="og:title" content="Install and setup" />
-<meta property="og:description" content=" Install JDK8&#43; or OpenJDK8&#43; Install Maven3&#43; Add the composite-automation-harness dependency to your maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.4&lt;/version&gt; &lt;/dependency&gt; " />
+<meta property="og:description" content="1. Install JDK8&#43; 2. Install Maven3&#43; 3. Add the composite-automation-harness dependency to the maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.6&lt;/version&gt; &lt;/dependency&gt; 4. Create and configure the directories in the maven project Create the &ldquo;resources&rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/composite-automation-harness/install/" /><meta property="article:section" content="composite-automation-harness" />
 
 
 <meta itemprop="name" content="Install and setup">
-<meta itemprop="description" content=" Install JDK8&#43; or OpenJDK8&#43; Install Maven3&#43; Add the composite-automation-harness dependency to your maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.4&lt;/version&gt; &lt;/dependency&gt; ">
+<meta itemprop="description" content="1. Install JDK8&#43; 2. Install Maven3&#43; 3. Add the composite-automation-harness dependency to the maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.6&lt;/version&gt; &lt;/dependency&gt; 4. Create and configure the directories in the maven project Create the &ldquo;resources&rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution.">
 
-<meta itemprop="wordCount" content="19">
+<meta itemprop="wordCount" content="422">
 <meta itemprop="keywords" content="at,tech," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install and setup"/>
-<meta name="twitter:description" content=" Install JDK8&#43; or OpenJDK8&#43; Install Maven3&#43; Add the composite-automation-harness dependency to your maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.4&lt;/version&gt; &lt;/dependency&gt; "/>
+<meta name="twitter:description" content="1. Install JDK8&#43; 2. Install Maven3&#43; 3. Add the composite-automation-harness dependency to the maven project &lt;dependency&gt; &lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt; &lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt; &lt;version&gt;3.0.6&lt;/version&gt; &lt;/dependency&gt; 4. Create and configure the directories in the maven project Create the &ldquo;resources&rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution."/>
 
 
 <link rel="stylesheet" href="/css/styles.bc1e8f17f51fb2fde2d5884f0bd7bc9d1a24ef700516a1f55d61434888edd89161e752db09ac80ce7db64ca443d986ce8a36bf65980a4a84d7ebacfe72bc2db8.css" integrity="sha512-vB6PF/Ufsv3i1YhPC9e8nRok73AFFqH1XWFDSIjt2JFh51LbCayAzn22TKRD2YbOija/ZZgKSoTX66z&#43;crwtuA==">
@@ -33,7 +33,7 @@
 
 
 
-  <meta name="description" content=" Install JDK8&#43; or OpenJDK8&#43; Install Maven3&#43; Add the composite-automation-harness dependency to your maven project &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; ">
+  <meta name="description" content="1. Install JDK8&#43; 2. Install Maven3&#43; 3. Add the composite-automation-harness dependency to the maven project &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.6&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 4. Create and configure the directories in the maven project Create the &amp;ldquo;resources&amp;rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution.">
 
 
 </head>
@@ -74,6 +74,9 @@
 		<li class="nav-item">
 			<a class="nav-link" href="/at-dashboard/"><span>AT Dashboard</span></a>
 		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/cah-api-doc/"><span>CAH API Doc</span></a>
+		</li>
 		
 
 		
@@ -103,26 +106,190 @@
   <section class="section aside_inner">
     <h2 class="section_title"><a  href="/composite-automation-harness/" class="group">A brief of composite automation harness</a></h2>
       <section class="" id="docs-a-brief-of-composite-automation-harness">
-        <h3 class="section_link active"><a id="docs-install-and-setup" href="/composite-automation-harness/install/">Install and setup</a></h3><nav id="TableOfContents"></nav>
+        <h3 class="section_link active"><a id="docs-install-and-setup" href="/composite-automation-harness/install/">Install and setup</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-install-jdk8">1. Install JDK8+</a></li>
+        <li><a href="#2-install-maven3">2. Install Maven3+</a></li>
+        <li><a href="#3-add-the-composite-automation-harness-dependency-to-the-maven-project">3. Add the composite-automation-harness dependency to the maven project</a></li>
+        <li><a href="#4-create-and-configure-the-directories-in-the-maven-project">4. Create and configure the directories in the maven project</a></li>
+        <li><a href="#5-create-the-module-configure-files-and-module-data-files">5. Create the module configure files and module data files</a></li>
+        <li><a href="#6-download-chrome-driver-firefox-driver-or-ie-driver-to-target-directories">6. Download Chrome Driver, Firefox Driver or IE Driver to target directories.</a></li>
+        <li><a href="#7-create-and-set-up-the-global-configproperties">7. Create and set up the global-config.properties</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-integration-with-at-dashboard" href="/composite-automation-harness/integration/">Integration with AT Dashboard</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-download-and-set-up-the-at-dashboard-service">1. Download and set up the AT Dashboard service</a></li>
+        <li><a href="#2-configure-the-endpoint-of-aggregation-service-of-at-dashboard-in-global-configure">2. Configure the endpoint of aggregation service of AT Dashboard in Global configure</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-quick-start-by-template" href="/composite-automation-harness/quickstart/">Quick start by template</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-check-out-the-quick-start-project-from-github">1. Check out the quick start project from github</a></li>
+        <li><a href="#2-basic-examples">2. Basic examples</a></li>
+        <li><a href="#3-advanced-examples">3. Advanced examples</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-user-manual" href="/composite-automation-harness/manual/">User manual</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-each-test-class-extends-from-abstracttest">1. Each test class extends from AbstractTest</a></li>
+        <li><a href="#2-managed-webdriver">2. Managed WebDriver</a></li>
+        <li><a href="#3-managed-restful-api-client">3. Managed RESTful API Client</a></li>
+        <li><a href="#4-test-data-management">4. Test Data Management</a></li>
+        <li><a href="#5-network-tunnels-creation-and-deletion-by-jsch-sshj-sshd-putty">5. Network tunnels creation and deletion by JSCH, SSHJ, SSHD, PUTTY</a></li>
+        <li><a href="#6-native-logger">6. Native Logger</a></li>
+        <li><a href="#7-test-reporting">7. Test reporting</a></li>
+        <li><a href="#8-eco-design-pattern">8. ECO Design Pattern</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
       </section>
   </section>
 </aside>
 
   <main class="content">
-    <h1>Install and setup</h1><ol>
-<li>Install JDK8+ or OpenJDK8+</li>
-<li>Install Maven3+</li>
-<li>Add the composite-automation-harness dependency to your maven project</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>tech.testnx.cah<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>composite-automation-harness<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>3.0.4<span style="color:#f92672">&lt;/version&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+    <h1>Install and setup</h1><h3 id="1-install-jdk8">1. Install JDK8+</h3>
+<h3 id="2-install-maven3">2. Install Maven3+</h3>
+<h3 id="3-add-the-composite-automation-harness-dependency-to-the-maven-project">3. Add the composite-automation-harness dependency to the maven project</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">&lt;groupId&gt;tech.testnx.cah&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">&lt;artifactId&gt;composite-automation-harness&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">&lt;version&gt;3.0.6&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h3 id="4-create-and-configure-the-directories-in-the-maven-project">4. Create and configure the directories in the maven project</h3>
+<p>Create the &ldquo;resources&rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution.</p>
+<div class="mermaid">
+graph LR
+A[Project] --> B(src) --> B.1(test)
+A[Project] --> C(resources)
+A[Project] --> D(pom.xml)
+
+C --> C.1(config)
+C.1 --> C.1.1(global-config.properties)
+C.1 --> C.1.2(module-1-config.properties)
+C.1 --> C.1.3(module-N-config.properties)
+
+C --> C.2(data)
+C.2 --> C.2.1(json)
+C.2.1 --> C.2.1.1(module-1)
+C.2.1.1 --> C.2.1.1.1(env1) --> C.2.1.1.1.1("module-1@env1.json")
+C.2.1.1 --> C.2.1.1.2(env2) --> C.2.1.1.2.1("module-1@env2.json")
+C.2.1 --> C.2.1.2(module-N)
+C.2.1.2 --> C.2.1.2.1(env1) --> C.2.1.2.1.1("module-N@env1.json")
+C.2.1.2 --> C.2.1.2.2(env2) --> C.2.1.2.2.1("module-N@env2.json")
+C.2 --> C.2.2(xls)
+C.2.2 --> C.2.2.1(module-1)
+C.2.2.1 --> C.2.2.1.1(env1) --> C.2.2.1.1.1("module-1@env1.xls")
+C.2.2.1 --> C.2.2.1.2(env2) --> C.2.2.1.2.1("module-1@env2.xls")
+C.2.2 --> C.2.2.2(module-N)
+C.2.2.2 --> C.2.2.2.1(env1) --> C.2.2.2.1.1("module-N@env1.xls")
+C.2.2.2 --> C.2.2.2.2(env2) --> C.2.2.2.2.1("module-N@env2.xls")
+
+C --> C.3(driver)
+C.3 --> C.3.1(chrome)
+C.3 --> C.3.2(firefox)
+C.3.2 --> C.3.2.1(win32)
+C.3.2 --> C.3.2.2(win64)
+C.3 --> C.3.3(IE)
+C.3.3 --> C.3.3.1(win32)
+C.3.3 --> C.3.3.2(win64)
+
+C --> C.4(logs)
+C.4 --> C.4.1(browser)
+
+C --> C.5(reports)
+C --> C.6(temp)
+</div>
+
+<h3 id="5-create-the-module-configure-files-and-module-data-files">5. Create the module configure files and module data files</h3>
+<p>In this case, there two modules(module-1 and module-N) and two environments(env1 and env2). Like <strong>module-1-config.properties</strong>, <strong>module-1@env1.xls</strong> and <strong>module-1@env1.json</strong>&hellip;</p>
+<h3 id="6-download-chrome-driver-firefox-driver-or-ie-driver-to-target-directories">6. Download Chrome Driver, Firefox Driver or IE Driver to target directories.</h3>
+<ul>
+<li><a href="https://chromedriver.chromium.org/downloads">Chrome Driver</a></li>
+<li><a href="https://github.com/mozilla/geckodriver/releases/">Firefox Driver</a></li>
+<li><a href="https://www.selenium.dev/downloads/">IE Driver</a></li>
+</ul>
+<h3 id="7-create-and-set-up-the-global-configproperties">7. Create and set up the global-config.properties</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e">#Project name and AT owner</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Project_Name=Your_Project_Name</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Project_Owner=Your_Project_Owner  </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Browser: CHROME, FIREFOX32, FIREFOX64, IE32, IE64, EDEG </span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Driver_Browser_Name=CHROME</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Browser headless(True/False): Only valid for Chrome and Firefox</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Browser_Headless=false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Driver timeout setting, Unit: SECOND</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Driver_Implicit_Timeout=10</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Driver_Script_Timeout=10</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Driver_PageLoad_Timeout=60</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Failure screenshot strategy: DEFAULT, FULL_SCREEN, FULL_DOM_PAGE</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#DEFAULT will not change browser display mode and just keep the original status before take screenshot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#FULL_SCREEN will change browser display mode as full screen before take screenshot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#FULL_DOM_PAGE will take screenshot for entire DOM page</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Failure_Screenshot_Strategy=DEFAULT</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Retry count when a test is failed, that will re-execute entire test. Value 0 means no retry.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Retry_Count=0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Log Level: TRACE, DEBUG, INFO, WARN, ERROR</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Log_Level=INFO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Log timezone: Asia/Shanghai   America/Los_Angeles  </span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Log_TimeZone=Asia/Shanghai</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Test Environment: env1, env2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Test_Environment=env1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Test Data type: xls, json</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">TEST_DATA_TYPE=json</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#SSH Client: JSCH, SSHJ, SSHD, PUTTY</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">SSH_Client=JSCH</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Report type(support multiple reports): CONSOLE, EXCEL, HTML_BOOTSTRAP</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Report_Type=CONSOLE, EXCEL, HTML_BOOTSTRAP</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Keep reports history: TRUE, FALSE</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Keep_Reports=FALSE</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Enable report aggregation: TRUE, FALSE</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#If enable, need set up the aggregation service end-point</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Enable_Report_Aggregation=FALSE</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Report_Aggregation_Endpoint=http://localhost:8600</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Monitor Provider(support multiple provider): Http_Archiver_Monitor, Web_API_Perf_Monitor, Web_UI_Perf_Monitor</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Monitor_Provider=Web_API_Perf_Monitor, Web_UI_Perf_Monitor</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Enable Performance Monitoring: TRUE, FALSE</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Enable_Performance_Monitor=TRUE</span>
 </span></span></code></pre></div>
-    <div class="pager">
+    <div class="pager pager_lean">
   
 
+  
+    
+    <div class="pager_item next">
+      <a href="/composite-automation-harness/integration/" class="pager_link button" title="Integration with AT Dashboard" rel="next">
+        <span class="pager_label">Integration with AT Dashboard</span>
+      </a>
+    </div>
+    
   
 </div>
   </main>
@@ -234,8 +401,17 @@
         </span>`.trim();n.push(o),e.closest("pre").className="chroma",pushClass(e,"language-unknown"),e.dataset.lang=not_set}}),e.innerHTML=n.join("").trim(" "))}function wrapOrphanedPreElements(){const e=elems("pre");Array.from(e).forEach(function(e){const t=e.parentNode,n=!containsClass(t,highlight);if(n){const t=createEl();t.className=highlight;const n=createEl();n.className=highlight_wrap,wrapEl(e,t),wrapEl(t,n)}})}wrapOrphanedPreElements();function codeBlocks(){const e=elems("code"),t=Array.from(e).filter(function(e){return addLines(e),e.closest("pre")&&!Array.from(e.classList).includes("noClass")}).map(function(e){return e});return t}function codeBlockFits(e){const t=e.offsetWidth,n=e.closest(`.${highlight}`).offsetWidth;return t<=n}function maxHeightIsSet(e){let t=e.style.maxHeight;return t.includes("px")}function restrainCodeBlockHeight(e){const n=e[max_lines-1];let t=full_height;if(n){const s=n.offsetTop;if(s!==0){t=`${s}px`;const n=e[0].parentNode,o=n.closest(`.${highlight}`),i=containsClass(o,panel_expanded);i||(n.dataset.height=t,n.style.maxHeight=t)}}}const blocks=codeBlocks();function collapseCodeBlock(e){const t=elems(line_class,e),n=t.length;if(n>max_lines){const n=createEl();pushClass(n,panel_expand),pushClass(n,panel_from),n.title="Toggle snippet",n.textContent="...";const s=e.closest(".highlight");window.setTimeout(function(){const e=s.nextElementSibling.lastElementChild;deleteClass(e,panel_hide)},150),restrainCodeBlockHeight(t);const o=e.parentNode.parentNode;o.appendChild(n)}}blocks.forEach(function(e){collapseCodeBlock(e)});function actionPanel(){const e=createEl();return e.className=panel_box,snippet_actions.forEach(function(t){const n=createEl("a");n.href="#",n.title=t.title,n.className=`icon panel_icon panel_${t.id}`,!t.show&&pushClass(n,panel_hide),loadSvg(t.icon,n),e.appendChild(n)}),e}function toggleLineNumbers(e){e&&(e.forEach(e=>modifyClass(e,"pre_nolines")),restrainCodeBlockHeight(e))}function toggleLineWrap(e){modifyClass(e,"pre_wrap");const t=elems(".ln",e);restrainCodeBlockHeight(t)}function copyCode(e){const t=e.parentNode.parentNode.querySelector(`.${copy_id}`),s=t.title;loadSvg("check",t),t.title=copied_text,e=e.cloneNode(!0);const n=elems(".ln",e);!!n.length&&n.forEach(e=>e.remove());let o=elems("span",e);o.forEach(e=>{const t=e.textContent.trim(" ");t.indexOf("$")===0&&(e.textContent=e.textContent.replace("$ ",""))});const i=e.textContent.trim(" ");copyToClipboard(i),setTimeout(function(){t.title=s,loadSvg("copy",t)},2250)}(function(){const n=highlight_wrap;blocks.forEach(function(e){show_lines===!1&&toggleLineNumbers(elems(".ln",e));const o=e.parentNode.parentNode,t=createEl();t.className=n,wrapEl(o,t);const s=actionPanel(),i=elem(`.${wrap_id}`,s);!codeBlockFits(e)&&deleteClass(i,panel_hide),t.appendChild(s)});function t(e,t){return e.matches(`.${t}`)||e.closest(`.${t}`)}function s(e,t){const n=e.matches(`.${t}`)?e:e.closest(`.${t}`);deleteClass(n,active),setTimeout(function(){modifyClass(n,active)},50)}doc.addEventListener("click",function(e){const o=e.target,i=t(o,copy_id),a=t(o,wrap_id),r=t(o,lines_id),c=t(o,panel_expand),l=i||a||r||c;if(l){e.preventDefault(),s(o,"icon");const t=o.closest(`.${n}`).firstElementChild.firstElementChild;let l=elems(".ln",t);if(!!a&&toggleLineWrap(t),!!r&&toggleLineNumbers(l),c){let e=t.firstElementChild;const n=e.closest(".highlight");maxHeightIsSet(e)?(e.style.maxHeight=full_height,pushClass(n,panel_expanded)):(e.style.maxHeight=e.dataset.height,deleteClass(n,panel_expanded))}!!i&&copyCode(t)}}),function(){blocks.forEach(e=>{let t=e.dataset.lang;const n=shell_based.includes(t);if(n){const t=elems(line_class,e);Array.from(t).forEach(e=>{e=e.lastElementChild;let t=e.textContent.trim(" ");!!(t.indexOf("$")!==0&&t.trim(" ").length)&&pushClass(e,"shell")})}if(t=t==="sh"?"shell":t,t!=="fallback"){const n=createEl();n.textContent=t,pushClass(n,"lang"),e.closest(`.${highlight_wrap}`).appendChild(n)}})}()})();function prefersColor(e){return`(prefers-color-scheme: ${e})`}function systemMode(){return window.matchMedia&&window.matchMedia(prefersColor(dark)).matches?dark:light}function currentMode(){let e=light+dark;e=[...e];let t=getComputedStyle(doc).getPropertyValue(key).replace(/"/g,"").trim();return[...t].filter(t=>e.includes(t)).join("")}function changeMode(e){e?(bank.setItem(storageKey,light),elemAttribute(doc,mode_data,light)):(bank.setItem(storageKey,dark),elemAttribute(doc,mode_data,dark))}function pickModePicture(e){elems("picture").forEach(function(t){let o=t.firstElementChild;const n=t.dataset,s=[n.lit,n.dark];o.src=e=="dark"?s[1]:s[0]})}function setUserColorMode(e=!1){const t=currentMode()==dark,n=bank.getItem(storageKey),s=systemMode();n?e?changeMode(t):elemAttribute(doc,mode_data,n):changeMode(e===!0?t:s!==dark);const o=doc.dataset.mode;doc.dataset.systemmode=s,!!o&&pickModePicture(o)}setUserColorMode(),function(){return elem(".nav_header").offsetHeight+25}();function toggleMenu(e){const t=e.target,o=t.matches(`.${toggle_id}`),n=t.closest(`.${toggle_id}`),i=elems(`.${show_id}`)?Array.from(elems(`.${show_id}`)):[],a=t.closest(`.${menu}`);function s(e,t=!1){i.forEach(function(n){!t&&deleteClass(n,show_id),n!==e.closest(`.${menu}`)&&deleteClass(n,show_id)})}if(o||n){const s=n?n.parentNode.parentNode:t.parentNode.parentNode;e.preventDefault(),modifyClass(s,show_id)}else a?s(t,!0):s(t)}(function(){const t=elems("code");t&&t.forEach(function(e){hasClasses(e)||!e.children.length&&pushClass(e,"noClass")})})();function featureHeading(){const t="section_link",n="section_title",e=elem(".aside");if(e){let s=elem(`.${t}.${active}`);s=s||elem(`.${n}.${active}`),e.scroll({top:s.offsetTop,left:0})}}function activeHeading(e,t){let n=Object.create(null);n.active=t.filter(function(e){return containsClass(e,active)})[0],n.new=t.filter(function(t){return parseInt(t.dataset.position)===e})[0],n.active!=n.new&&(!!n.active&&deleteClass(n.active,active),pushClass(n.new,active))}setTimeout(()=>{featureHeading()},50);function updateDate(){const t=new Date,e=t.getFullYear().toString,n=elem(".year");!!n&&(e.textContent=e)}function customizeSidebar(){const e="toc_active",n=elem("aside"),t=elems("nav",n);if(t){t.forEach(function(t){if(t.id="",pushClass(t,"toc"),t.children.length>=1){const n=Array.from(t.children[0].children),s=t.previousElementSibling;!!s.matches(`.${active}`)&&pushClass(t,e),n.forEach(function(e){pushClass(e,"toc_item"),pushClass(e.firstElementChild,"toc_link")})}});const n=elem(`.${e}`);if(n){const e=Array.from(elems("a",n)),s=e.map(function(e){return e.hash}),t=s.map(function(e){const t=document.getElementById(decodeURIComponent(e.replace("#",""))),n=t.offsetTop;return n});e.forEach(function(e,n){e.dataset.position=t[n]}),window.addEventListener("scroll",function(){let s=window.scrollY,o=closestInt(s,t);activeHeading(o,e)})}}elems("p").forEach(function(e){const t=elems(".button",e);t.length>1&&pushClass(e,"button_grid")})}function markExternalLinks(){let e=elems("a");e&&Array.from(e).forEach(function(e){let n,o,i,s,a,r,t,c;t=new URL(e.href),c=t.host!==location.host||t.protocol!==location.protocol||t.port!==location.port,c&&(n="target",o="rel",i="_blank",s="noopener",a=elemAttribute(e,n),r=elemAttribute(e,s),!a&&elemAttribute(e,n,i),!r&&elemAttribute(e,o,s))})}function sanitizeURL(e){const t=e.indexOf(hash);if(t>-1){const n=e.substr(t,e.length-1);e=e.replace(n,"")}return e}function createDeepLinks(){let e=[];[...Array(6).keys()].forEach(function(t){t&&Array.prototype.push.apply(e,document.getElementsByTagName(`h${t+1}`))}),e.forEach(e=>{let t=createEl("a"),n=createEl("img");n.src="/icons/link.svg",t.className="link icon",t.appendChild(n);let s=e.getAttribute("id");s&&(t.href=`${sanitizeURL(document.URL)}#${s}`,e.appendChild(t),pushClass(e,"link_owner"))})}function copyFeedback(e){const t=document.createElement("div"),n="link_yanked";if(t.classList.add(n),t.innerText=copied_text,!elem(`.${n}`,e)){const n=e.getElementsByTagName("img")[0],s=n.src;n.src="/icons/check.svg",e.appendChild(t),setTimeout(function(){e.removeChild(t),n.src=s},2250)}}function copyHeadingLink(){let t,n,s,o,e;t="link",n=elems(`.${t}`),n&&document.addEventListener("click",function(n){e=n.target,o=e.parentNode,(e&&containsClass(e,t)||containsClass(o,t))&&(n.preventDefault(),s=e.href!=void 0?e.href:e.parentNode.href,copyToClipboard(s),copyFeedback(e.href!=void 0?e:e.parentNode))})}function makeTablesResponsive(){const e=elems("table");e&&e.forEach(function(e){const t=createEl();pushClass(t,"scrollable"),wrapEl(e,t)})}function backToTop(){const e=elem("#toTop");window.addEventListener("scroll",()=>{const t=window.scrollY;t>=200?(e.style.display="flex",pushClass(e,active)):deleteClass(e,active)})}function lazyLoadMedia(e=[]){e.forEach(e=>{let t=elems(e);t&&Array.from(t).forEach(function(e){e.loading="lazy"})})}function loadActions(){updateDate(),customizeSidebar(),markExternalLinks(),createDeepLinks(),copyHeadingLink(),makeTablesResponsive(),backToTop(),lazyLoadMedia(["iframe","img"]),doc.addEventListener("click",e=>{let t=e.target,n="color_choice",s=containsClass(t,n);!!s&&setUserColorMode(!0),toggleMenu(e)})}window.addEventListener("load",loadActions())
 </script>
 
-<script src="/js/search.min.b899b7113018193af3d5fa94f0fbfd0748a392c264019d216391348c1b6b2d15e4bcb1a926ea7b71b9ad96185551537b5e466285dfc24bed2f71c861b45291bc.js" async></script>
+<script src="/js/search.min.2169799b84ee1d9865839c4e28ea9e959550a4f96473d256331564aa599e7e9aedcdc64cd8da5b41c187608c9283ca27b98a891fb0026fb9bbf4f81d9f2cda71.js" async></script>
 
 
+
+<script defer src=/js/mermaid.min.js></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    mermaid.initialize({
+      flowchart: { useMaxWidth: true }
+    });
+  });
+</script>
 </body>
 </html>

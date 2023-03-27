@@ -67,6 +67,9 @@
 		<li class="nav-item">
 			<a class="nav-link" href="/at-dashboard/"><span>AT Dashboard</span></a>
 		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/cah-api-doc/"><span>CAH API Doc</span></a>
+		</li>
 		
 
 		
@@ -96,39 +99,102 @@
   <section class="section aside_inner">
     <h2 class="section_title active"><a  href="/composite-automation-harness/" class="group">A brief of composite automation harness</a></h2>
       <section class="" id="docs-a-brief-of-composite-automation-harness">
-        <h3 class="section_link"><a id="docs-install-and-setup" href="/composite-automation-harness/install/">Install and setup</a></h3><nav id="TableOfContents"></nav>
+        <h3 class="section_link"><a id="docs-install-and-setup" href="/composite-automation-harness/install/">Install and setup</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-install-jdk8">1. Install JDK8+</a></li>
+        <li><a href="#2-install-maven3">2. Install Maven3+</a></li>
+        <li><a href="#3-add-the-composite-automation-harness-dependency-to-the-maven-project">3. Add the composite-automation-harness dependency to the maven project</a></li>
+        <li><a href="#4-create-and-configure-the-directories-in-the-maven-project">4. Create and configure the directories in the maven project</a></li>
+        <li><a href="#5-create-the-module-configure-files-and-module-data-files">5. Create the module configure files and module data files</a></li>
+        <li><a href="#6-download-chrome-driver-firefox-driver-or-ie-driver-to-target-directories">6. Download Chrome Driver, Firefox Driver or IE Driver to target directories.</a></li>
+        <li><a href="#7-create-and-set-up-the-global-configproperties">7. Create and set up the global-config.properties</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-integration-with-at-dashboard" href="/composite-automation-harness/integration/">Integration with AT Dashboard</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-download-and-set-up-the-at-dashboard-service">1. Download and set up the AT Dashboard service</a></li>
+        <li><a href="#2-configure-the-endpoint-of-aggregation-service-of-at-dashboard-in-global-configure">2. Configure the endpoint of aggregation service of AT Dashboard in Global configure</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-quick-start-by-template" href="/composite-automation-harness/quickstart/">Quick start by template</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-check-out-the-quick-start-project-from-github">1. Check out the quick start project from github</a></li>
+        <li><a href="#2-basic-examples">2. Basic examples</a></li>
+        <li><a href="#3-advanced-examples">3. Advanced examples</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-user-manual" href="/composite-automation-harness/manual/">User manual</a></h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-each-test-class-extends-from-abstracttest">1. Each test class extends from AbstractTest</a></li>
+        <li><a href="#2-managed-webdriver">2. Managed WebDriver</a></li>
+        <li><a href="#3-managed-restful-api-client">3. Managed RESTful API Client</a></li>
+        <li><a href="#4-test-data-management">4. Test Data Management</a></li>
+        <li><a href="#5-network-tunnels-creation-and-deletion-by-jsch-sshj-sshd-putty">5. Network tunnels creation and deletion by JSCH, SSHJ, SSHD, PUTTY</a></li>
+        <li><a href="#6-native-logger">6. Native Logger</a></li>
+        <li><a href="#7-test-reporting">7. Test reporting</a></li>
+        <li><a href="#8-eco-design-pattern">8. ECO Design Pattern</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
       </section>
   </section>
 </aside>
 
   <main class="content">
-    <h1>A brief of composite automation harness</h1><p><strong>1. Managed WebDriver and REST Client with rich features and possibilities</strong></p>
+    <h1>A brief of composite automation harness</h1><blockquote>
+<p>The Composite Automation Harness is the java automation solution for Web UI, RESTful API and Windows GUI. It is built on top of Selenium, Jersey, AutoIT and TestNG.</p>
+</blockquote>
+<h6 id="1-managed-webdriver-and-rest-client-with-rich-features-and-possibilities">1. Managed WebDriver and REST Client with rich features and possibilities</h6>
 <ul>
 <li>Web UI testing based on managed WebDriver with flexible listeners</li>
 <li>RESTful API testing based on managed REST Client with flexible listeners</li>
 <li>Both WebDriver and REST Client can be customized by user listeners to extend their capabilities</li>
 </ul>
-<p><strong>2. Secured and zero effort test data management with multiple data types</strong></p>
+<h6 id="2-secured-and-zero-effort-test-data-management-with-multiple-data-types">2. Secured and zero effort test data management with multiple data types</h6>
 <ul>
 <li>Both JSON and XLS is supported for test data</li>
 <li>Auto-binding between test and data with zero effort, support data types: Boolean, Short, Integer, Long, Float, Double, String, JsonNode, TransformableTestDataBean(interface)</li>
 <li>Auto-Decrypt to secured test data, user only needs to focus on data use</li>
 </ul>
-<p><strong>3. Secure network connection is easy</strong></p>
+<h6 id="3-test-data-and-config-are-modularized-for-the-large-project-and-multiple-environments">3. Test, data and config are modularized for the large project and multiple environments</h6>
+<ul>
+<li>All tests in multiple modules shared with base formwork and global configuration</li>
+<li>Each test and data have own module, it is flexible for the large project</li>
+<li>One test is mapped to multiple data sets for different environment</li>
+<li>support data driven test</li>
+</ul>
+<h6 id="4-secure-network-connection-is-easy">4. Secure network connection is easy</h6>
 <ul>
 <li>Network tunnels creation and deletion are managed by framework with multiple providers: JSCH, SSHJ, SSHD, PUTTY</li>
 <li>Support the transaction in automation process</li>
 </ul>
-<p><strong>4. Rich report types(Console, XLS, HTML) and contents(function result, UI performance and API performance)</strong></p>
+<h6 id="5-rich-report-typesconsole-xls-html-and-contentsfunction-result-ui-performance-and-api-performance">5. Rich report types(Console, XLS, HTML) and contents(function result, UI performance and API performance)</h6>
 <ul>
 <li>Report type has Console, XLS, HTML</li>
 <li>Report contains Test ID, Name, Description, Duration, Recording for each case, Errors, Exceptions, Logs and Screenshot for failed case</li>
 <li>Provide performance reports of both Web UI testing and API testing without additional effort. Performance Monitor Types: Rest Client Monitor, Web Browser Monitor and Http Proxy Monitor</li>
 </ul>
-<p><strong>5. ECO Design Pattern</strong></p>
+<h6 id="6-eco-design-pattern">6. ECO Design Pattern</h6>
 <ul>
 <li>Auto-detect automation accident and auto-retry at right place and right timing within a minimum scope, and no retry code in test. This is one answer to question why human can do successfully but automation cannot?</li>
 </ul>
+<h6 id="7-framwork-diagram">7. Framwork diagram</h6>
+<p><img src="/images/cah/CAH-Framwork.png" alt="framwork" title="CAH Framwork"></p>
 
     <div class="pager pager_lean">
   
@@ -244,7 +310,7 @@
         </span>`.trim();n.push(o),e.closest("pre").className="chroma",pushClass(e,"language-unknown"),e.dataset.lang=not_set}}),e.innerHTML=n.join("").trim(" "))}function wrapOrphanedPreElements(){const e=elems("pre");Array.from(e).forEach(function(e){const t=e.parentNode,n=!containsClass(t,highlight);if(n){const t=createEl();t.className=highlight;const n=createEl();n.className=highlight_wrap,wrapEl(e,t),wrapEl(t,n)}})}wrapOrphanedPreElements();function codeBlocks(){const e=elems("code"),t=Array.from(e).filter(function(e){return addLines(e),e.closest("pre")&&!Array.from(e.classList).includes("noClass")}).map(function(e){return e});return t}function codeBlockFits(e){const t=e.offsetWidth,n=e.closest(`.${highlight}`).offsetWidth;return t<=n}function maxHeightIsSet(e){let t=e.style.maxHeight;return t.includes("px")}function restrainCodeBlockHeight(e){const n=e[max_lines-1];let t=full_height;if(n){const s=n.offsetTop;if(s!==0){t=`${s}px`;const n=e[0].parentNode,o=n.closest(`.${highlight}`),i=containsClass(o,panel_expanded);i||(n.dataset.height=t,n.style.maxHeight=t)}}}const blocks=codeBlocks();function collapseCodeBlock(e){const t=elems(line_class,e),n=t.length;if(n>max_lines){const n=createEl();pushClass(n,panel_expand),pushClass(n,panel_from),n.title="Toggle snippet",n.textContent="...";const s=e.closest(".highlight");window.setTimeout(function(){const e=s.nextElementSibling.lastElementChild;deleteClass(e,panel_hide)},150),restrainCodeBlockHeight(t);const o=e.parentNode.parentNode;o.appendChild(n)}}blocks.forEach(function(e){collapseCodeBlock(e)});function actionPanel(){const e=createEl();return e.className=panel_box,snippet_actions.forEach(function(t){const n=createEl("a");n.href="#",n.title=t.title,n.className=`icon panel_icon panel_${t.id}`,!t.show&&pushClass(n,panel_hide),loadSvg(t.icon,n),e.appendChild(n)}),e}function toggleLineNumbers(e){e&&(e.forEach(e=>modifyClass(e,"pre_nolines")),restrainCodeBlockHeight(e))}function toggleLineWrap(e){modifyClass(e,"pre_wrap");const t=elems(".ln",e);restrainCodeBlockHeight(t)}function copyCode(e){const t=e.parentNode.parentNode.querySelector(`.${copy_id}`),s=t.title;loadSvg("check",t),t.title=copied_text,e=e.cloneNode(!0);const n=elems(".ln",e);!!n.length&&n.forEach(e=>e.remove());let o=elems("span",e);o.forEach(e=>{const t=e.textContent.trim(" ");t.indexOf("$")===0&&(e.textContent=e.textContent.replace("$ ",""))});const i=e.textContent.trim(" ");copyToClipboard(i),setTimeout(function(){t.title=s,loadSvg("copy",t)},2250)}(function(){const n=highlight_wrap;blocks.forEach(function(e){show_lines===!1&&toggleLineNumbers(elems(".ln",e));const o=e.parentNode.parentNode,t=createEl();t.className=n,wrapEl(o,t);const s=actionPanel(),i=elem(`.${wrap_id}`,s);!codeBlockFits(e)&&deleteClass(i,panel_hide),t.appendChild(s)});function t(e,t){return e.matches(`.${t}`)||e.closest(`.${t}`)}function s(e,t){const n=e.matches(`.${t}`)?e:e.closest(`.${t}`);deleteClass(n,active),setTimeout(function(){modifyClass(n,active)},50)}doc.addEventListener("click",function(e){const o=e.target,i=t(o,copy_id),a=t(o,wrap_id),r=t(o,lines_id),c=t(o,panel_expand),l=i||a||r||c;if(l){e.preventDefault(),s(o,"icon");const t=o.closest(`.${n}`).firstElementChild.firstElementChild;let l=elems(".ln",t);if(!!a&&toggleLineWrap(t),!!r&&toggleLineNumbers(l),c){let e=t.firstElementChild;const n=e.closest(".highlight");maxHeightIsSet(e)?(e.style.maxHeight=full_height,pushClass(n,panel_expanded)):(e.style.maxHeight=e.dataset.height,deleteClass(n,panel_expanded))}!!i&&copyCode(t)}}),function(){blocks.forEach(e=>{let t=e.dataset.lang;const n=shell_based.includes(t);if(n){const t=elems(line_class,e);Array.from(t).forEach(e=>{e=e.lastElementChild;let t=e.textContent.trim(" ");!!(t.indexOf("$")!==0&&t.trim(" ").length)&&pushClass(e,"shell")})}if(t=t==="sh"?"shell":t,t!=="fallback"){const n=createEl();n.textContent=t,pushClass(n,"lang"),e.closest(`.${highlight_wrap}`).appendChild(n)}})}()})();function prefersColor(e){return`(prefers-color-scheme: ${e})`}function systemMode(){return window.matchMedia&&window.matchMedia(prefersColor(dark)).matches?dark:light}function currentMode(){let e=light+dark;e=[...e];let t=getComputedStyle(doc).getPropertyValue(key).replace(/"/g,"").trim();return[...t].filter(t=>e.includes(t)).join("")}function changeMode(e){e?(bank.setItem(storageKey,light),elemAttribute(doc,mode_data,light)):(bank.setItem(storageKey,dark),elemAttribute(doc,mode_data,dark))}function pickModePicture(e){elems("picture").forEach(function(t){let o=t.firstElementChild;const n=t.dataset,s=[n.lit,n.dark];o.src=e=="dark"?s[1]:s[0]})}function setUserColorMode(e=!1){const t=currentMode()==dark,n=bank.getItem(storageKey),s=systemMode();n?e?changeMode(t):elemAttribute(doc,mode_data,n):changeMode(e===!0?t:s!==dark);const o=doc.dataset.mode;doc.dataset.systemmode=s,!!o&&pickModePicture(o)}setUserColorMode(),function(){return elem(".nav_header").offsetHeight+25}();function toggleMenu(e){const t=e.target,o=t.matches(`.${toggle_id}`),n=t.closest(`.${toggle_id}`),i=elems(`.${show_id}`)?Array.from(elems(`.${show_id}`)):[],a=t.closest(`.${menu}`);function s(e,t=!1){i.forEach(function(n){!t&&deleteClass(n,show_id),n!==e.closest(`.${menu}`)&&deleteClass(n,show_id)})}if(o||n){const s=n?n.parentNode.parentNode:t.parentNode.parentNode;e.preventDefault(),modifyClass(s,show_id)}else a?s(t,!0):s(t)}(function(){const t=elems("code");t&&t.forEach(function(e){hasClasses(e)||!e.children.length&&pushClass(e,"noClass")})})();function featureHeading(){const t="section_link",n="section_title",e=elem(".aside");if(e){let s=elem(`.${t}.${active}`);s=s||elem(`.${n}.${active}`),e.scroll({top:s.offsetTop,left:0})}}function activeHeading(e,t){let n=Object.create(null);n.active=t.filter(function(e){return containsClass(e,active)})[0],n.new=t.filter(function(t){return parseInt(t.dataset.position)===e})[0],n.active!=n.new&&(!!n.active&&deleteClass(n.active,active),pushClass(n.new,active))}setTimeout(()=>{featureHeading()},50);function updateDate(){const t=new Date,e=t.getFullYear().toString,n=elem(".year");!!n&&(e.textContent=e)}function customizeSidebar(){const e="toc_active",n=elem("aside"),t=elems("nav",n);if(t){t.forEach(function(t){if(t.id="",pushClass(t,"toc"),t.children.length>=1){const n=Array.from(t.children[0].children),s=t.previousElementSibling;!!s.matches(`.${active}`)&&pushClass(t,e),n.forEach(function(e){pushClass(e,"toc_item"),pushClass(e.firstElementChild,"toc_link")})}});const n=elem(`.${e}`);if(n){const e=Array.from(elems("a",n)),s=e.map(function(e){return e.hash}),t=s.map(function(e){const t=document.getElementById(decodeURIComponent(e.replace("#",""))),n=t.offsetTop;return n});e.forEach(function(e,n){e.dataset.position=t[n]}),window.addEventListener("scroll",function(){let s=window.scrollY,o=closestInt(s,t);activeHeading(o,e)})}}elems("p").forEach(function(e){const t=elems(".button",e);t.length>1&&pushClass(e,"button_grid")})}function markExternalLinks(){let e=elems("a");e&&Array.from(e).forEach(function(e){let n,o,i,s,a,r,t,c;t=new URL(e.href),c=t.host!==location.host||t.protocol!==location.protocol||t.port!==location.port,c&&(n="target",o="rel",i="_blank",s="noopener",a=elemAttribute(e,n),r=elemAttribute(e,s),!a&&elemAttribute(e,n,i),!r&&elemAttribute(e,o,s))})}function sanitizeURL(e){const t=e.indexOf(hash);if(t>-1){const n=e.substr(t,e.length-1);e=e.replace(n,"")}return e}function createDeepLinks(){let e=[];[...Array(6).keys()].forEach(function(t){t&&Array.prototype.push.apply(e,document.getElementsByTagName(`h${t+1}`))}),e.forEach(e=>{let t=createEl("a"),n=createEl("img");n.src="/icons/link.svg",t.className="link icon",t.appendChild(n);let s=e.getAttribute("id");s&&(t.href=`${sanitizeURL(document.URL)}#${s}`,e.appendChild(t),pushClass(e,"link_owner"))})}function copyFeedback(e){const t=document.createElement("div"),n="link_yanked";if(t.classList.add(n),t.innerText=copied_text,!elem(`.${n}`,e)){const n=e.getElementsByTagName("img")[0],s=n.src;n.src="/icons/check.svg",e.appendChild(t),setTimeout(function(){e.removeChild(t),n.src=s},2250)}}function copyHeadingLink(){let t,n,s,o,e;t="link",n=elems(`.${t}`),n&&document.addEventListener("click",function(n){e=n.target,o=e.parentNode,(e&&containsClass(e,t)||containsClass(o,t))&&(n.preventDefault(),s=e.href!=void 0?e.href:e.parentNode.href,copyToClipboard(s),copyFeedback(e.href!=void 0?e:e.parentNode))})}function makeTablesResponsive(){const e=elems("table");e&&e.forEach(function(e){const t=createEl();pushClass(t,"scrollable"),wrapEl(e,t)})}function backToTop(){const e=elem("#toTop");window.addEventListener("scroll",()=>{const t=window.scrollY;t>=200?(e.style.display="flex",pushClass(e,active)):deleteClass(e,active)})}function lazyLoadMedia(e=[]){e.forEach(e=>{let t=elems(e);t&&Array.from(t).forEach(function(e){e.loading="lazy"})})}function loadActions(){updateDate(),customizeSidebar(),markExternalLinks(),createDeepLinks(),copyHeadingLink(),makeTablesResponsive(),backToTop(),lazyLoadMedia(["iframe","img"]),doc.addEventListener("click",e=>{let t=e.target,n="color_choice",s=containsClass(t,n);!!s&&setUserColorMode(!0),toggleMenu(e)})}window.addEventListener("load",loadActions())
 </script>
 
-<script src="/js/search.min.b899b7113018193af3d5fa94f0fbfd0748a392c264019d216391348c1b6b2d15e4bcb1a926ea7b71b9ad96185551537b5e466285dfc24bed2f71c861b45291bc.js" async></script>
+<script src="/js/search.min.2169799b84ee1d9865839c4e28ea9e959550a4f96473d256331564aa599e7e9aedcdc64cd8da5b41c187608c9283ca27b98a891fb0026fb9bbf4f81d9f2cda71.js" async></script>
 
 
 </body>
