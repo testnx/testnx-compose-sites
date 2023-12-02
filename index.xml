@@ -5,43 +5,44 @@
     <link>/</link>
     <description>Recent content in WebSite Home on TestNX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install and setup</title>
       <link>/composite-automation-harness/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/composite-automation-harness/install/</guid>
-      <description>1. Install JDK8+ 2. Install Maven3+ 3. Add the composite-automation-harness dependency to the maven project &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.2.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 4. Create and configure the directories in the maven project Create the &amp;ldquo;resources&amp;rdquo; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution.</description>
+      <description>1. Install JDK8+ 2. Install Maven3+ 3. Add the composite-automation-harness dependency to the maven project 1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.2.3&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 4. Create and configure the directories in the maven project Create the &amp;quot;resources&amp;quot; directory in home of the maven project and sub-directories based on below diagram. For exmape, there are two modules named module-1 and module-N, and two test environments named env1 and env2. In general the directories are created automatically when the first test execution.</description>
     </item>
-    
+    <item>
+      <title>Next</title>
+      <link>/at-dashboard/next/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/at-dashboard/next/</guid>
+      <description> First Rebuild front end with Vue and Vuetify Second Import Web API performance results Import Web UI performance results Third Add new dashboard for across multiple resources ? </description>
+    </item>
     <item>
       <title>Integration with AT Dashboard</title>
       <link>/composite-automation-harness/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/composite-automation-harness/integration/</guid>
       <description>1. Download and set up the AT Dashboard service Please refer to AT Dashboard
 2. Configure the endpoint of aggregation service of AT Dashboard in Global configure The test result will be published to AT Dashboard automatically
 #Enable report aggregation: TRUE, FALSE#If enable, need set up the aggregation service end-pointEnable_Report_Aggregation=FALSEReport_Aggregation_Endpoint=http://at-dashboard-endpoint:8600 </description>
     </item>
-    
     <item>
       <title>Quick start by template</title>
       <link>/composite-automation-harness/quickstart/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/composite-automation-harness/quickstart/</guid>
       <description>1. Check out the quick start project from github [Git URL: https://github.com/testnx/CAH-quick-start-by-template.git]
-2. Basic examples Basic tests in package &amp;rsquo;tech.testnx.cah.quickstart.basic&amp;rsquo;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
-3. Advanced examples Advanced tests in package &amp;rsquo;tech.testnx.cah.quickstart.advanced&amp;rsquo;, that demonstrate the usage of ECO Design Pattern.</description>
+2. Basic examples Basic tests in package &#39;tech.testnx.cah.quickstart.basic&#39;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
+3. Advanced examples Advanced tests in package &#39;tech.testnx.cah.quickstart.advanced&#39;, that demonstrate the usage of ECO Design Pattern.</description>
     </item>
-    
     <item>
       <title>User manual</title>
       <link>/composite-automation-harness/manual/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/composite-automation-harness/manual/</guid>
       <description>1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
 WebDriver driver = getDriver();
@@ -55,6 +56,5 @@ driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();</description>
     </item>
-    
   </channel>
 </rss>

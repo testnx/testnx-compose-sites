@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>/composite-automation-harness/</loc>
-  </url><url>
-    <loc>/at-dashboard/</loc>
-  </url><url>
-    <loc>/composite-automation-harness/install/</loc>
-  </url><url>
-    <loc>/composite-automation-harness/integration/</loc>
-  </url><url>
-    <loc>/composite-automation-harness/quickstart/</loc>
-  </url><url>
-    <loc>/composite-automation-harness/manual/</loc>
-  </url><url>
-    <loc>/tags/at/</loc>
-  </url><url>
-    <loc>/categories/cah/</loc>
-  </url><url>
-    <loc>/categories/</loc>
-  </url><url>
-    <loc>/tags/</loc>
-  </url><url>
-    <loc>/tags/tech/</loc>
-  </url><url>
-    <loc>/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>/en/sitemap.xml</loc>
+    
+      <lastmod>2023-12-02T17:32:53+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>/ch/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>

@@ -5,6 +5,14 @@
     <link>/at-dashboard/</link>
     <description>Recent content in AT Dashboard on TestNX</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/at-dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="/at-dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next</title>
+      <link>/at-dashboard/next/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/at-dashboard/next/</guid>
+      <description> First Rebuild front end with Vue and Vuetify Second Import Web API performance results Import Web UI performance results Third Add new dashboard for across multiple resources ? </description>
+    </item>
   </channel>
 </rss>
