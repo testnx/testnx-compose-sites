@@ -8,6 +8,9 @@
     <loc>/at-dashboard/</loc>
     <lastmod>2023-03-27T21:55:41+08:00</lastmod>
   </url><url>
+    <loc>/cah-api-doc/</loc>
+    <lastmod>2023-12-08T15:59:05+08:00</lastmod>
+  </url><url>
     <loc>/composite-automation-harness/install/</loc>
     <lastmod>2023-11-22T11:48:43+08:00</lastmod>
   </url><url>
@@ -22,6 +25,12 @@
   </url><url>
     <loc>/composite-automation-harness/manual/</loc>
     <lastmod>2023-11-08T15:51:31+08:00</lastmod>
+  </url><url>
+    <loc>/cah-api-doc/jdk11/legal/jquery/</loc>
+    <lastmod>2023-12-08T15:59:05+08:00</lastmod>
+  </url><url>
+    <loc>/cah-api-doc/jdk11/legal/jqueryui/</loc>
+    <lastmod>2023-12-08T15:59:05+08:00</lastmod>
   </url><url>
     <loc>/tags/at/</loc>
     <lastmod>2023-11-22T11:48:43+08:00</lastmod>
