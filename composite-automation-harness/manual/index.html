@@ -28,7 +28,7 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/composite-automation-harness/manual/" /><meta property="article:section" content="composite-automation-harness" />
 
-<meta property="article:modified_time" content="2023-12-10T11:06:03+08:00" />
+<meta property="article:modified_time" content="2024-02-11T21:53:00+08:00" />
 
 <meta itemprop="name" content="User manual">
 <meta itemprop="description" content="1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
@@ -42,8 +42,8 @@ WebDriverEventListener listener= new AbstractWebDriverEventListener() {};
 driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
-<meta itemprop="dateModified" content="2023-12-10T11:06:03+08:00" />
-<meta itemprop="wordCount" content="1121">
+<meta itemprop="dateModified" content="2024-02-11T21:53:00+08:00" />
+<meta itemprop="wordCount" content="1289">
 <meta itemprop="keywords" content="at,tech," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="User manual"/>
 <meta name="twitter:description" content="1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
@@ -189,8 +189,9 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
         <li><a href="#4-test-data-management">4. Test Data Management</a></li>
         <li><a href="#5-network-tunnels-creation-and-deletion-by-jsch-sshj-sshd-putty">5. Network tunnels creation and deletion by JSCH, SSHJ, SSHD, PUTTY</a></li>
         <li><a href="#6-native-logger">6. Native Logger</a></li>
-        <li><a href="#7-test-reporting">7. Test reporting</a></li>
-        <li><a href="#8-eco-design-pattern">8. ECO Design Pattern</a></li>
+        <li><a href="#7-cah-assert">7. CAH Assert</a></li>
+        <li><a href="#8-test-reporting">8. Test reporting</a></li>
+        <li><a href="#9-eco-design-pattern">9. ECO Design Pattern</a></li>
       </ul>
     </li>
   </ul>
@@ -483,7 +484,30 @@ Log_Level=INFO
   	logger.error(&#34;&#34;);
 </code></pre></li>
 </ul>
-<h3 id="7-test-reporting">7. Test reporting</h3>
+<h3 id="7-cah-assert">7. CAH Assert</h3>
+<ul>
+<li>CahAssert is 100% compatible with testNG Assert. Actually CahAssert is the delegate of testNG Assert. CahAssert saves all assert detail information into AssertRecord, which will be displayed in reports.</li>
+</ul>
+<pre tabindex="0"><code>  @Test
+  public void testCahAssert() {
+  	Object[] actual = {1.5, 1.6, 1.7, 1.8};
+  	Object[] expected = {1.9, 1.6, 1.7, 1.8};
+  	CahAssert.assertNotEquals(actual , expected, &#34;Check if object array is equal&#34;);
+  }
+</code></pre><ul>
+<li>AssertRecord.Extra is information holder if need to save extra information into records, which will be displayed in reports. Extra information only be available and saved into next assert.</li>
+</ul>
+<pre tabindex="0"><code>  @Test
+  public void testCahAssert() {
+  	Object[] actual = {1.5, 1.6, 1.7, 1.8};
+  	Object[] expected = {1.9, 1.6, 1.7, 1.8};
+    AssertRecord.Extra.setExtra(&#34;This is the first extra information for testCahAssert&#34;);
+  	CahAssert.assertNotEquals(actual , expected, &#34;The first extra information is available and saved into this assert&#34;);
+    CahAssert.assertNotEquals(actual , expected, &#34;The first extra information is not available and saved into this assert&#34;);
+    AssertRecord.Extra.setExtra(&#34;This is the second extra information for testCahAssert&#34;);
+    CahAssert.assertEquals(actual , expected, &#34;The second extra information is available and saved into this assert&#34;);
+  }
+</code></pre><h3 id="8-test-reporting">8. Test reporting</h3>
 <ul>
 <li>
 <p>Annotation for report:  @Description</p>
@@ -497,7 +521,7 @@ Log_Level=INFO
 <li>
 <p>Recorder: record test flow and status in report</p>
 <pre tabindex="0"><code>	 Recorder.log(String msg);
-corder.log(Recordable rec);
+  Recorder.log(Recordable rec);
 </code></pre></li>
 <li>
 <p>Report type: CONSOLE, EXCEL, HTML_BOOTSTRAP, HTML_VUE_VUETIFY
@@ -570,7 +594,7 @@ Recording all http activities for both Web UI test and Restful API test, finally
 </ul>
 </li>
 </ul>
-<h3 id="8-eco-design-pattern">8. ECO Design Pattern</h3>
+<h3 id="9-eco-design-pattern">9. ECO Design Pattern</h3>
 <ul>
 <li>Auto-detect automation accident and auto-retry at right place and right timing within a minimum scope, and no retry code in test</li>
 <li>Roles: Executor, Controller, Operator (ECO)</li>
