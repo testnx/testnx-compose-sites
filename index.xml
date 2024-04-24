@@ -15,7 +15,7 @@
       <description>1. Install JDK8/11/17 2. Install Maven3+ 3. Add the composite-automation-harness dependency to the maven project JDK8 Based on testng_7.5, selenium_3.141.59, jersey_2.25.1, jackson_2.13.4.2, freemarker_2.3.30, guice_4.2.2
 And it is the last build for JDK8
 1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.2.3&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK11 Based on testng_7.8, selenium_4.16.1, jersey_2.41, jackson_2.13.4.2, freemarker_2.3.32, guice_7.0.0 And it is main development branch for now.
-1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.4.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK17 Pre-research is done, it is coming soon.</description>
+1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.5.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK17 Pre-research is done, it is coming soon.</description>
     </item>
     <item>
       <title>Next</title>
@@ -72,6 +72,21 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/cah-api-doc/jdk11/legal/jqueryui/</guid>
       <description>jQuery UI v1.13.2 jQuery UI License Copyright jQuery Foundation and other contributors, https://jquery.org/ This software consists of voluntary contributions made by many individuals. For exact contribution history, see the revision history available at https://github.com/jquery/jquery-ui The following license applies to all parts of this software except as documented below: ==== Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;#34;Software&amp;#34;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>/cah-api-doc/jdk11/legal/jszip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/cah-api-doc/jdk11/legal/jszip/</guid>
+      <description>JSZip v3.7.1 JSZip is dual licensed. You may use it under the MIT license or the GPLv3 license.
+The MIT License Copyright (c) 2009-2016 Stuart Knightley, David Duponchel, Franz Buchinger, António Afonso Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;#34;Software&amp;#34;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>/cah-api-doc/jdk11/legal/pako/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/cah-api-doc/jdk11/legal/pako/</guid>
+      <description>Pako v1.0 Pako License Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &#34;Software&#34;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</description>
     </item>
   </channel>
 </rss>
