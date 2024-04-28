@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CAH Web API Perf Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/5.0.0/echarts.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <p style="background-color:gray; color: white; text-align: right;">Powered by CAH AT &nbsp;</p>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="title">
+            <h1 class="text-center">CAH Web API Performance Report</h1><br>
+        </div>
+		
+        <div class="row clearfix">
+            <div class="col-7 column">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>MODULE</th>
+                            <th>SUITE</th>
+                            <th>ENVIROMENT</th>
+                            <th>EXECUTION DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>demo</td>
+                            <td>Example testsuite</td>
+                            <td>env1</td>
+                            <td>2024-04-28 15:52:01</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>HTTP METHOD</th>
+                            <th>REQUEST COUNT</th>
+                            <th>AVERAGE RESPONSE TIME(Sec)</th>
+                            <th>ERROR RATE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>TOTAL</td>
+                            <td>6</td>
+                            <td>0.623</td>
+                            <td>83.3%</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>3</td>
+                            <td>0.636</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>POST</td>
+                            <td>1</td>
+                            <td>0.59</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>PUT</td>
+                            <td>1</td>
+                            <td>0.583</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td>
+                            <td>1</td>
+                            <td>0.654</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>OTHERS</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </div>
+            <div class="col-5 column">
+                <div id="mychart" style="width:450px; height:350px;"></div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-12 column">
+            <table id="web-api-perf-details-table" class="table table-bordered table-striped table-hover table-responsive">
+                <thead class="thead-light">
+                    <tr>
+                        <th>
+                          <select id="method-selector" onchange="filterByMethod()" class="custom-select" style="font-weight:bold; padding-bottom:0px; border:none; background-color:#e9ecef; height:auto; width:auto;">
+                            <option value="TOTAL" selected>HTTP METHOD</option>
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="DELETE">DELETE</option>
+                            <option value="OTHERS">OTHERS</option>                          
+                          </select>
+                        </th>
+                        <th>HTTP PATH</th>
+                        <th>COUNT</th>
+                        <th>AVERAGE RESPONSE TIME(Sec)</th>
+                        <th>MAX RESPONSE TIME(Sec)</th>
+						<th>MIN RESPONSE TIME(Sec)</th>
+						<th>ERROR RATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DELETE</td>
+                        <td style="width:52%; word-break:break-all; word-wrap:break-word; white-space:inherit">https://dummy.restapiexample.com/api/v1/delete/5</td>
+                        <td>1</td>
+						<td>0.654</td>
+						<td>0.654</td>
+                        <td>0.654</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td style="width:52%; word-break:break-all; word-wrap:break-word; white-space:inherit">https://dummy.restapiexample.com/api/v1/employees</td>
+                        <td>3</td>
+						<td>0.636</td>
+						<td>0.643</td>
+                        <td>0.624</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>POST</td>
+                        <td style="width:52%; word-break:break-all; word-wrap:break-word; white-space:inherit">https://dummy.restapiexample.com/api/v1/create</td>
+                        <td>1</td>
+						<td>0.59</td>
+						<td>0.59</td>
+                        <td>0.59</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td style="width:52%; word-break:break-all; word-wrap:break-word; white-space:inherit">https://dummy.restapiexample.com/api/v1/update/719</td>
+                        <td>1</td>
+						<td>0.583</td>
+						<td>0.583</td>
+                        <td>0.583</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="background-color:gray; color: white; text-align: right;"></p>
+    </div>
+
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('mychart'));
+        var option = {
+            title: {
+                text: 'API Chart',
+                left: 'center',
+                textStyle: {
+                    color: 'gray',
+                    //'normal','italic','oblique'
+                    fontStyle: 'italic',
+                    //'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                    fontWeight: 'normal',
+                    fontFamily: 'arial',
+                    fontSize: 14
+                }
+
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{b} : {c} ({d}%)"
+            },
+
+            color: ['blue', 'yellow', 'green', 'red', 'grey'],
+
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                left: 'right',
+                data: ['GET', 'POST', 'PUT', 'DELETE', 'OTHERS'],
+            },
+            series: [
+                {
+                    name: 'API Chart',
+                    type: 'pie',    //chart type
+                    radius: '50%',  //cycle radius
+                    center: ['50%', '50%'],
+                    data: [          // data array，name and value
+                        { name: 'GET', value: 3},
+                        { name: 'POST', value: 1},
+                        { name: 'PUT', value: 1},
+                        { name: 'DELETE', value: 1},
+                        { name: 'OTHERS', value: 0}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+    
+	<script type="text/javascript">
+        function filterByMethod() {
+            let s = document.getElementById('method-selector');
+            let tbody = document.getElementById('web-api-perf-details-table').getElementsByTagName('tbody')[0];
+            let rows = tbody.getElementsByTagName('tr');
+
+            if (s.value == 'TOTAL') {
+                for(let i = 0; i < rows.length; i++) {
+                    rows[i].setAttribute('class', '');
+                }
+                return;
+            };
+			
+			if (s.value == 'OTHERS') {
+			    for(let i = 0; i < rows.length; i++) {
+					let httpMethod = rows[i].getElementsByTagName('td')[0].textContent;
+					if ((httpMethod != 'GET') && (httpMethod != 'POST') && (httpMethod != 'PUT') && (httpMethod != 'DELETE')) {
+					    rows[i].setAttribute('class', '');
+					} else {
+					    rows[i].setAttribute('class', 'd-none');
+					} 
+			    }
+			    return;
+			};
+			
+            for(let i = 0; i < rows.length; i++) {
+                let httpMethod = rows[i].getElementsByTagName('td')[0].textContent;
+                if (httpMethod == s.value) {
+                    rows[i].setAttribute('class', '');
+                } else {
+                    rows[i].setAttribute('class', 'd-none');
+                }  
+            }
+        }
+    </script>
+
+</body>
+
+</html>

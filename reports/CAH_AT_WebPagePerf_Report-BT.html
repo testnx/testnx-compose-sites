@@ -1,0 +1,1637 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CAH Web UI Perf Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/5.0.0/echarts.min.js"></script>
+</head>
+
+<body class="small">
+
+    <div class="header">
+        <p style="background-color:gray; color: white; text-align: right;">Powered by CAH AT &nbsp;</p>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="title">
+            <h1 class="text-center">CAH Web UI Performance Report</h1><br>
+        </div>
+		
+        <div class="row clearfix">
+            <div class="col-7 column">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>MODULE</th>
+                            <th>SUITE</th>
+                            <th>ENVIROMENT</th>
+                            <th>EXECUTION DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>demo</td>
+                            <td>Example testsuite</td>
+                            <td>env1</td>
+                            <td>2024-04-28 15:52:01</td>
+                        </tr>
+                    </tbody>                
+                </table>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-12 column">
+            <table id="web-page-perf-navigation-analysis-table" class="table table-bordered table-hover table-responsive small table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th>NAVIGATION (statistics)</th>
+                        <th>COUNT</th>
+                        <th>REDIRECT TO FETCH-START AVERAGE(Sec)</th>
+                        <th>REDIRECT TO FETCH-START MAX(Sec)</th>
+                        <th>REDIRECT TO FETCH-START MIN(Sec)</th>
+                        <th>DOMAIN LOOKUP AVERAGE(Sec)</th>
+                        <th>DOMAIN LOOKUP MAX(Sec)</th>
+                        <th>DOMAIN LOOKUP MIN(Sec)</th>
+                        <th>HTTP CONNECTION AVERAGE(Sec)</th>
+                        <th>HTTP CONNECTION MAX(Sec)</th>
+                        <th>HTTP CONNECTION MIN(Sec)</th>
+                        <th>REQUEST TO RESPONSE AVERAGE(Sec)</th>
+                        <th>REQUEST TO RESPONSE MAX(Sec)</th>
+                        <th>REQUEST TO RESPONSE MIN(Sec)</th>
+                        <th>DOM CONSTRUCTION AVERAGE(Sec)</th>
+                        <th>DOM CONSTRUCTION MAX(Sec)</th>
+                        <th>DOM CONSTRUCTION MIN(Sec)</th>
+                        <th>LOAD EVENT AVERAGE(Sec)</th>
+                        <th>LOAD EVENT MAX(Sec)</th>
+                        <th>LOAD EVENT MIN(Sec)</th>
+                        <th>DURATION AVERAGE(Sec)</th>
+                        <th>DURATION MAX(Sec)</th>
+                        <th>DURATION MIN(Sec)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/</td>
+                        <td>4</td>
+                        <td>0.02</td>
+                        <td>0.02</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.58</td>
+                        <td>0.6</td>
+                        <td>0.55</td>
+                        <td>2.58</td>                       
+                        <td>3.23</td>
+                        <td>2.15</td>	
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>3.76</td>
+                        <td>4.32</td>
+                        <td>3.07</td>		
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/search?q=DXC&sca_esv=2f6a510e87352dee&source=hp&ei=PgAuZqXXIvfn2roPlaOUGA&iflsig=ANes7DEAAAAAZi4OTnpWh0Ne8dREqsO1eh2vZe2sbJHb&ved=0ahUKEwil7urZtuSFAxX3s1YBHZURBQMQ4dUDCA0&oq=DXC&gs_lp=Egdnd3Mtd2l6IgNEWEMyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIiRBQAFgEcAB4AJABAJgB4wGgAY0FqgEDMi0zuAEMyAEA-AEBmAIDoAKWBcICCxAuGIAEGNEDGMcBmAMAkgcDMi0zoAejGQ&sclient=gws-wiz</td>
+                        <td>1</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>	
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>		
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/search?q=HPE&sca_esv=2f6a510e87352dee&source=hp&ei=NgAuZsijDbjj2roP0qCkqAo&iflsig=ANes7DEAAAAAZi4ORpENqwNloziLN_txTkIDHphVwito&ved=0ahUKEwjIlu3VtuSFAxW4sVYBHVIQCaUQ4dUDCA0&oq=HPE&gs_lp=Egdnd3Mtd2l6IgNIUEUyCxAuGIAEGNEDGMcBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAuGIAESIAQUABYBHAAeACQAQCYAd0BoAH8BKoBAzItM7gBDMgBAPgBAZgCA6AChgWYAwCSBwMyLTOgB-cZ&sclient=gws-wiz</td>
+                        <td>1</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>	
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>		
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/search?q=HP&sca_esv=2f6a510e87352dee&sca_upv=1&source=hp&ei=LAAuZou_Fo6p2roP1KGpoAU&iflsig=ANes7DEAAAAAZi4OPFcIi_WUvud1yDxF0svgr7SEnpXW&ved=0ahUKEwiLhZTRtuSFAxWOlFYBHdRQClQQ4dUDCA0&oq=HP&gs_lp=Egdnd3Mtd2l6IgJIUDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAuGIAEMgUQLhiABDIFEAAYgARIghBQAFgDcAB4AJABAZgB_QGgAdADqgEDMi0yuAEMyAEA-AEBmAIBoALYAZgDAJIHAzItMaAHzxE&sclient=gws-wiz</td>
+                        <td>1</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>-0.01</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>	
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>		
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/search?q=DXC&sca_esv=2f6a510e87352dee&source=hp&ei=IwAuZt_LJ4Pb2roP4K2H4AM&iflsig=ANes7DEAAAAAZi4OM7SJjmEnSy_Gl_cju6VZPTX97QMN&ved=0ahUKEwif6f_MtuSFAxWDrVYBHeDWATwQ4dUDCA0&oq=DXC&gs_lp=Egdnd3Mtd2l6IgNEWEMyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIjhBQAFgDcAB4AJABAJgB7QGgAaYFqgEDMi0zuAEMyAEA-AEBmAIDoAK0BcICCxAuGIAEGNEDGMcBmAMAkgcDMi0zoAejGQ&sclient=gws-wiz</td>
+                        <td>1</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>0.01</td>
+                        <td>-0.02</td>
+                        <td>-0.02</td>
+                        <td>-0.02</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>	
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>		
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        
+        <div class="row clearfix">
+            <div class="col-12 column">
+            <table id="web-page-perf-ajax-analysis-table" class="table table-bordered table-hover table-responsive small table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th>AJAX (statistics)</th>
+                        <th>COUNT</th>
+                        <th>REDIRECT TO FETCH-START AVERAGE(Sec)</th>
+                        <th>REDIRECT TO FETCH-START MAX(Sec)</th>
+                        <th>REDIRECT TO FETCH-START MIN(Sec)</th>
+                        <th>DOMAIN LOOKUP AVERAGE(Sec)</th>
+                        <th>DOMAIN LOOKUP MAX(Sec)</th>
+                        <th>DOMAIN LOOKUP MIN(Sec)</th>
+                        <th>HTTP CONNECTION AVERAGE(Sec)</th>
+                        <th>HTTP CONNECTION MAX(Sec)</th>
+                        <th>HTTP CONNECTION MIN(Sec)</th>
+                        <th>REQUEST TO RESPONSE AVERAGE(Sec)</th>
+                        <th>REQUEST TO RESPONSE MAX(Sec)</th>
+                        <th>REQUEST TO RESPONSE MIN(Sec)</th>
+                        <th>DURATION AVERAGE(Sec)</th>
+                        <th>DURATION MAX(Sec)</th>
+                        <th>DURATION MIN(Sec)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-justify">https://play.google.com/log?format=json&hasfast=true</td>
+                        <td>2</td>
+                        <td>-3.25</td>
+                        <td>-2.91</td>
+                        <td>-3.59</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>3.76</td>
+                        <td>4.11</td>
+                        <td>3.41</td>
+                        <td>0.52</td>
+                        <td>0.52</td>
+                        <td>0.51</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=NgAuZsijDbjj2roP0qCkqAo.1714290743943&dpr=1.25&nolsbt=1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.47</td>
+                        <td>0.47</td>
+                        <td>0.47</td>
+                        <td>0.47</td>
+                        <td>0.47</td>
+                        <td>0.47</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=LAAuZou_Fo6p2roP1KGpoAU.1714290733990&dpr=1.25&nolsbt=1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=IwAuZt_LJ4Pb2roP4K2H4AM.1714290725575&dpr=1.25&nolsbt=1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>
+                        <td>0.37</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwjIlu3VtuSFAxW4sVYBHVIQCaUQj-0KCB0..i&ei=NgAuZsijDbjj2roP0qCkqAo&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:NgAuZsijDbjj2roP0qCkqAo,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oEJylKH2V5JVrdI9VdvMfNWoB8P4Q,_fmt:prog,_id:a3JU5b</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.28</td>
+                        <td>0.28</td>
+                        <td>0.28</td>
+                        <td>0.28</td>
+                        <td>0.28</td>
+                        <td>0.28</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwil7urZtuSFAxX3s1YBHZURBQMQj-0KCB0..i&ei=PgAuZqXXIvfn2roPlaOUGA&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:PgAuZqXXIvfn2roPlaOUGA,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAABQOAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oGgBDIif9gBD6Wq1ITCGabEaE0xlw,_fmt:prog,_id:a3JU5b</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.23</td>
+                        <td>0.23</td>
+                        <td>0.23</td>
+                        <td>0.23</td>
+                        <td>0.23</td>
+                        <td>0.23</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwif6f_MtuSFAxWDrVYBHeDWATwQj-0KCB0..i&ei=IwAuZt_LJ4Pb2roP4K2H4AM&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:IwAuZt_LJ4Pb2roP4K2H4AM,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBAJwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oFljZXeW8p1DiGIeUy2Ori1-BVRpQ,_fmt:prog,_id:a3JU5b</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.22</td>
+                        <td>0.22</td>
+                        <td>0.22</td>
+                        <td>0.22</td>
+                        <td>0.22</td>
+                        <td>0.22</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/client_204?cs=1&opi=89978449</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.22</td>
+                        <td>0.28</td>
+                        <td>0.18</td>
+                        <td>0.22</td>
+                        <td>0.28</td>
+                        <td>0.18</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=PgAuZqXXIvfn2roPlaOUGA.1714290752158&dpr=1.25&nolsbt=1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.2</td>
+                        <td>0.21</td>
+                        <td>0.21</td>
+                        <td>0.21</td>     
+                    </tr>
+                    <tr>
+                        <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwiLhZTRtuSFAxWOlFYBHdRQClQQj-0KCB0..i&ei=LAAuZou_Fo6p2roP1KGpoAU&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:LAAuZou_Fo6p2roP1KGpoAU,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oEVH-HnyYZwHtInoeBL-LD67yR4oQ,_fmt:prog,_id:a3JU5b</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>                       
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.21</td>
+                        <td>0.21</td>
+                        <td>0.21</td>
+                        <td>0.21</td>
+                        <td>0.21</td>
+                        <td>0.21</td>     
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        
+        
+        <div class="row clearfix">
+            <div class="col-12 column">
+            <table id="web-page-perf-detail-table" class="table table-bordered table-hover table-responsive small table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th>PAGE (detail with sequence)</th>
+                        <th>Type</th>
+                        <th>REDIRECT TO FETCH-START (Sec)</th>
+                        <th>DOMAIN LOOKUP (Sec)</th>
+                        <th>HTTP CONNECTION (Sec)</th>
+                        <th>REQUEST TO RESPONSE (Sec)</th>
+                        <th>DOM CONSTRUCTION (Sec)</th>
+                        <th>LOAD EVENT (Sec)</th>
+                        <th>DURATION (Sec)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.59</td>
+                        <td>2.63</td>
+                        <td>0</td>
+                        <td>3.56</td>
+                    </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBAJwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=1/ed=1/rs=ACT90oFljZXeW8p1DiGIeUy2Ori1-BVRpQ/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.26</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.26</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/ed=1/dg=2/rs=ACT90oGe8N5fHA77DI0ZKKZCTQOILQQ4tQ/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf,FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe,KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO,fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO,fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.89</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.89</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.71</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.71</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/js/k=og.qtm.en_US.oT1FwJRCVC4.2019.O/rt=j/m=qabr,q_d,qcwid,qapid,qald,q_dg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTvBynad-nWEy1xIb9j1w6LpLOF6IQ</td>
+                            <td>Resource</td>
+                            <td>-0.95</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1.89</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.94</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/ss/k=og.qtm.T5bVtXo12IQ.L.W.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTssrVR1lBtzoy_MObv1DSp-vWG36A</td>
+                            <td>Resource</td>
+                            <td>-0.95</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1.46</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.51</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.62</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.62</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=IwAuZt_LJ4Pb2roP4K2H4AM&rt=wsrt.631,aft.940,afti.940,hst.45,prt.320&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.38</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.38</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=IwAuZt_LJ4Pb2roP4K2H4AM&s=webhp&t=all&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&adh=&ime=1&imex=1&imeh=0&imeha=0&imehb=0&imea=0&imeb=0&imel=0&imed=0&scp=0&mem=ujhs.6,tjhs.10,jhsl.4295,dm.8&nv=ne.1,feid.7df70bfa-b0e5-409a-958e-4a1bc12cd3b5&hp=&sys=hc.12&p=bs.true&rt=hst.45,prt.320,afti.940,aft.940,aftqf.941,xjses.951,xjsee.1046,xjs.1046,lcp.365,fcp.365,wsrt.631,cst.0,dnst.0,rqst.586,rspt.299,sslt.0,rqstt.344,unt.6,cstt.343,dit.974&zx=1714290725555&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.39</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.39</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=IwAuZt_LJ4Pb2roP4K2H4AM.1714290725575&dpr=1.25&nolsbt=1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.37</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.37</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/ck=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUgANhANQADYEAQAAAgAAwBAAQABAAKYCYAigAAEBAAMABAF4KBMQCJmAAAiQAJIQ5CAAgAgmGIBUAGIcAAAQQAIAAA4QYAABAxEgPIQAAIBAJwAACwCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/exm=SNUn3,cEt90b,cdos,cr,csi,d,dtl0hd,eHDfl,hsm,jsa,mb4ZUb,qddgKe,sTsDMc/ed=1/dg=0/ujg=1/rs=ACT90oGvrV1sxYyJ5AW7Ua6cNeOmxjFmsg/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=B2qlPe,DhPYme,GU4Gab,MpJwZc,NzU6V,UUJqVe,Wo3n8,aa,abd,async,epYOx,ms4mZb,mu,pHXghd,q0xTif,s39S4,sOXFj,sb_wiz,sf,sonic,spch?xjs=s1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.37</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.37</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/md=3/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/rs=ACT90oGe8N5fHA77DI0ZKKZCTQOILQQ4tQ</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.37</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.37</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?atyp=i&biw=1488&bih=750&dpr=1.25&ei=IwAuZt_LJ4Pb2roP4K2H4AM&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.36</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.36</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://ogs.google.com/widget/callout?prid=19015398&pgid=19011583&puid=3ac0456fbd77f36b&cce=1&dc=1&origin=https%3A%2F%2Fwww.google.com&cn=callout&pid=1&spid=538&hl=zh-CN</td>
+                            <td>Resource</td>
+                            <td>-1.9</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3.56</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.66</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.SCWmpDDGjPk.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo_Pl64J0IIHlj2zBtEJ3ZwdaJC3HA/cb=gapi.loaded_0</td>
+                            <td>Resource</td>
+                            <td>-1.92</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.58</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.66</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBAJwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=0/rs=ACT90oFljZXeW8p1DiGIeUy2Ori1-BVRpQ/m=syk3?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGe8N5fHA77DI0ZKKZCTQOILQQ4tQ/m=sy19g,P10Owf,syoc,sy182,sy184,gSZvdb,syts,syty,sytz,WlNQGd,syoa,syug,syui,nabPbb,syob,syod,syoe,syof,syoh,DPreE,syk3,sytr,sytt,CnSW2d,kQvlef,syuh,fXO0xe?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=i&ei=IwAuZt_LJ4Pb2roP4K2H4AM&dt19=2&zx=1714290725979&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?cs=1&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.19</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.19</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=IwAuZt_LJ4Pb2roP4K2H4AM&s=promo&rt=hpbas.1474&zx=1714290725980&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.19</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.19</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwif6f_MtuSFAxWDrVYBHeDWATwQj-0KCB0..i&ei=IwAuZt_LJ4Pb2roP4K2H4AM&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:IwAuZt_LJ4Pb2roP4K2H4AM,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBAJwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oFljZXeW8p1DiGIeUy2Ori1-BVRpQ,_fmt:prog,_id:a3JU5b</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.22</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.22</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGe8N5fHA77DI0ZKKZCTQOILQQ4tQ/m=syew,aLUfP?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.15</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=JQAuZtuRGq-o2roPzL-xuAI&s=async&astyp=hpba&ima=0&imn=0&mem=ujhs.6,tjhs.10,jhsl.4295,dm.8&nv=ne.1,feid.7df70bfa-b0e5-409a-958e-4a1bc12cd3b5&hp=&rt=ttfb.217,st.218,bs.27,aaft.227,acrt.227,art.227&zx=1714290726208&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.19</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.19</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=IwAuZt_LJ4Pb2roP4K2H4AM&s=promo&rt=hpbas.1474,hpbarr.228&zx=1714290726208&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.23</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.23</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABAJwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGe8N5fHA77DI0ZKKZCTQOILQQ4tQ/m=kMFpHd,sy8m,bm51tf?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.15</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://play.google.com/log?format=json&hasfast=true</td>
+                            <td>Resource</td>
+                            <td>-2.91</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3.41</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.51</td>
+                        </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/search?q=DXC&sca_esv=2f6a510e87352dee&source=hp&ei=IwAuZt_LJ4Pb2roP4K2H4AM&iflsig=ANes7DEAAAAAZi4OM7SJjmEnSy_Gl_cju6VZPTX97QMN&ved=0ahUKEwif6f_MtuSFAxWDrVYBHeDWATwQ4dUDCA0&oq=DXC&gs_lp=Egdnd3Mtd2l6IgNEWEMyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIjhBQAFgDcAB4AJABAJgB7QGgAaYFqgEDMi0zuAEMyAEA-AEBmAIDoAK0BcICCxAuGIAEGNEDGMcBmAMAkgcDMi0zoAejGQ&sclient=gws-wiz</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0.01</td>
+                        <td>-0.02</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/</td>
+                        <td>Navigation</td>
+                        <td>0.02</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.57</td>
+                        <td>2.15</td>
+                        <td>0</td>
+                        <td>3.07</td>
+                    </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=1/ed=1/rs=ACT90oEVH-HnyYZwHtInoeBL-LD67yR4oQ/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.21</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.21</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/ed=1/dg=2/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf,FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe,KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO,fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO,fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.58</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.58</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.46</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.46</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/js/k=og.qtm.en_US.oT1FwJRCVC4.2019.O/rt=j/m=qabr,q_d,qcwid,qapid,qald,q_dg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTvBynad-nWEy1xIb9j1w6LpLOF6IQ</td>
+                            <td>Resource</td>
+                            <td>-0.93</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1.74</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.81</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/ss/k=og.qtm.T5bVtXo12IQ.L.W.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTssrVR1lBtzoy_MObv1DSp-vWG36A</td>
+                            <td>Resource</td>
+                            <td>-0.93</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1.41</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.48</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.37</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.37</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=LAAuZou_Fo6p2roP1KGpoAU&rt=wsrt.631,aft.669,afti.669,hst.73,prt.296&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=LAAuZou_Fo6p2roP1KGpoAU&s=webhp&t=all&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&adh=&ime=1&imex=1&imeh=0&imeha=0&imehb=0&imea=0&imeb=0&imel=0&imed=0&scp=0&mem=ujhs.6,tjhs.10,jhsl.4295,dm.8&nv=ne.1,feid.229b0f69-f089-4a1c-bbed-b656f06e8e96&hp=&sys=hc.12&p=bs.true&rt=hst.73,prt.296,afti.669,aft.669,aftqf.670,xjses.671,xjsee.742,xjs.742,lcp.342,fcp.342,wsrt.631,cst.0,dnst.0,rqst.568,rspt.279,sslt.0,rqstt.342,unt.17,cstt.341,dit.949&zx=1714290733973&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.26</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.26</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=LAAuZou_Fo6p2roP1KGpoAU.1714290733990&dpr=1.25&nolsbt=1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.37</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.37</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/ck=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUgANhANQADYEAQAAAgAAwBAAQABAAKYCYAigAAEBAAMABAF4KBMQCJmAAAiQAJIQ5CAAgAgmGIBUAGIcAAAAQAIAAA4QYAABAxEgPIQAAIBABwAACwCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/exm=SNUn3,cEt90b,cdos,cr,csi,d,dtl0hd,eHDfl,hsm,jsa,mb4ZUb,qddgKe,sTsDMc/ed=1/dg=0/ujg=1/rs=ACT90oEeYxx3YWv42NgCBIyDDgpM_P-x-w/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=B2qlPe,DhPYme,GU4Gab,MpJwZc,NzU6V,UUJqVe,Wo3n8,aa,abd,async,epYOx,ms4mZb,pHXghd,q0xTif,s39S4,sOXFj,sb_wiz,sf,sonic,spch?xjs=s1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.24</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/md=3/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?atyp=i&biw=1488&bih=750&dpr=1.25&ei=LAAuZou_Fo6p2roP1KGpoAU&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.24</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=0/rs=ACT90oEVH-HnyYZwHtInoeBL-LD67yR4oQ/m=syk3?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=sy19g,P10Owf,syoc,sy182,sy184,gSZvdb,syts,syty,sytz,WlNQGd,syoa,syug,syui,nabPbb,syob,syod,syoe,syof,syoh,DPreE,syk3,sytr,sytt,CnSW2d,kQvlef,syuh,fXO0xe?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=i&ei=LAAuZou_Fo6p2roP1KGpoAU&dt19=2&zx=1714290734251&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?cs=1&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=LAAuZou_Fo6p2roP1KGpoAU&s=promo&rt=hpbas.1024&zx=1714290734253&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwiLhZTRtuSFAxWOlFYBHdRQClQQj-0KCB0..i&ei=LAAuZou_Fo6p2roP1KGpoAU&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:LAAuZou_Fo6p2roP1KGpoAU,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oEVH-HnyYZwHtInoeBL-LD67yR4oQ,_fmt:prog,_id:a3JU5b</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.21</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.21</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://ogs.google.com/widget/callout?prid=19015398&pgid=19011583&puid=3ac0456fbd77f36b&cce=1&dc=1&origin=https%3A%2F%2Fwww.google.com&cn=callout&pid=1&spid=538&hl=zh-CN</td>
+                            <td>Resource</td>
+                            <td>-1.75</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3.06</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.32</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.SCWmpDDGjPk.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo_Pl64J0IIHlj2zBtEJ3ZwdaJC3HA/cb=gapi.loaded_0</td>
+                            <td>Resource</td>
+                            <td>-1.76</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.44</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.68</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=syew,aLUfP?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=LQAuZtCjKrvo2roP4qOIwAY&s=async&astyp=hpba&ima=0&imn=0&mem=ujhs.6,tjhs.10,jhsl.4295,dm.8&nv=ne.1,feid.229b0f69-f089-4a1c-bbed-b656f06e8e96&hp=&rt=ttfb.210,st.210,bs.27,aaft.213,acrt.213,art.213&zx=1714290734467&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=LAAuZou_Fo6p2roP1KGpoAU&s=promo&rt=hpbas.1024,hpbarr.214&zx=1714290734467&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=kMFpHd,sy8m,bm51tf?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.15</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.15</td>
+                        </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/search?q=HP&sca_esv=2f6a510e87352dee&sca_upv=1&source=hp&ei=LAAuZou_Fo6p2roP1KGpoAU&iflsig=ANes7DEAAAAAZi4OPFcIi_WUvud1yDxF0svgr7SEnpXW&ved=0ahUKEwiLhZTRtuSFAxWOlFYBHdRQClQQ4dUDCA0&oq=HP&gs_lp=Egdnd3Mtd2l6IgJIUDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAuGIAEMgUQLhiABDIFEAAYgARIghBQAFgDcAB4AJABAZgB_QGgAdADqgEDMi0yuAEMyAEA-AEBmAIBoALYAZgDAJIHAzItMaAHzxE&sclient=gws-wiz</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.6</td>
+                        <td>2.31</td>
+                        <td>0</td>
+                        <td>4.32</td>
+                    </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=1/ed=1/rs=ACT90oEJylKH2V5JVrdI9VdvMfNWoB8P4Q/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/ed=1/dg=2/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf,FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe,KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO,fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO,fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.57</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.57</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.56</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.56</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?s=webhp&t=cap&atyp=csi&ei=NgAuZsijDbjj2roP0qCkqAo&rt=wsrt.1671,cbs.198,cbt.329,hst.199&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.44</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.44</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/js/k=og.qtm.en_US.oT1FwJRCVC4.2019.O/rt=j/m=qabr,q_d,qcwid,qapid,qald,q_dg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTvBynad-nWEy1xIb9j1w6LpLOF6IQ</td>
+                            <td>Resource</td>
+                            <td>-2.02</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.84</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.82</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/ss/k=og.qtm.T5bVtXo12IQ.L.W.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTssrVR1lBtzoy_MObv1DSp-vWG36A</td>
+                            <td>Resource</td>
+                            <td>-2.02</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.52</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.5</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.41</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.41</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=NgAuZsijDbjj2roP0qCkqAo&rt=wsrt.1671,aft.772,afti.772,cbs.198,cbt.329,hst.199,prt.354&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=NgAuZsijDbjj2roP0qCkqAo&s=webhp&t=all&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&adh=&ime=1&imex=1&imeh=0&imeha=0&imehb=0&imea=0&imeb=0&imel=0&imed=0&scp=0&mem=ujhs.6,tjhs.11,jhsl.4295,dm.8&nv=ne.1,feid.2f85e9b0-7dee-4555-b7d4-ff1c2f0c54f3&hp=&sys=hc.12&p=bs.true&rt=hst.199,cbs.198,cbt.329,prt.354,afti.772,aft.772,aftqf.773,xjses.783,xjsee.866,xjs.866,lcp.401,fcp.401,wsrt.1671,cst.0,dnst.0,rqst.603,rspt.338,sslt.0,rqstt.1406,unt.6,cstt.1403,dit.2049&zx=1714290743922&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.5</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.5</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=NgAuZsijDbjj2roP0qCkqAo.1714290743943&dpr=1.25&nolsbt=1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.47</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.47</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/ck=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUgANhANQADYEAQAAAgAAwBAAQABAAKYCYAigAAEBAAMABAF4KBMQCJmAAAiQAJIQ5CAAgAgmGIBUAGIcAAAQQAIAAA4QYAABAxEgPIQAAIBABwAACwCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/exm=SNUn3,cEt90b,cdos,cr,csi,d,dtl0hd,eHDfl,hsm,jsa,mb4ZUb,qddgKe,sTsDMc/ed=1/dg=0/ujg=1/rs=ACT90oHxLxHVGrkF-VfC_ztKXf61AXinZg/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=B2qlPe,DhPYme,GU4Gab,MpJwZc,NzU6V,UUJqVe,Wo3n8,aa,abd,async,epYOx,ms4mZb,pHXghd,q0xTif,s39S4,sOXFj,sb_wiz,sf,sonic,spch?xjs=s1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.47</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.47</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/md=3/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.29</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.3</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?atyp=i&biw=1488&bih=750&dpr=1.25&ei=NgAuZsijDbjj2roP0qCkqAo&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.47</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.47</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://ogs.google.com/widget/callout?prid=19015398&pgid=19011583&puid=3ac0456fbd77f36b&cce=1&dc=1&origin=https%3A%2F%2Fwww.google.com&cn=callout&pid=1&spid=538&hl=zh-CN</td>
+                            <td>Resource</td>
+                            <td>-2.85</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4.32</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.46</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.SCWmpDDGjPk.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo_Pl64J0IIHlj2zBtEJ3ZwdaJC3HA/cb=gapi.loaded_0</td>
+                            <td>Resource</td>
+                            <td>-2.87</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3.53</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.67</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=0/rs=ACT90oEJylKH2V5JVrdI9VdvMfNWoB8P4Q/m=syk3?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.15</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=sy19g,P10Owf,syoc,sy182,sy184,gSZvdb,syts,syty,sytz,WlNQGd,syoa,syug,syui,nabPbb,syob,syod,syoe,syof,syoh,DPreE,syk3,sytr,sytt,CnSW2d,kQvlef,syuh,fXO0xe?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.29</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.29</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=i&ei=NgAuZsijDbjj2roP0qCkqAo&dt19=2&zx=1714290744436&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.28</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.28</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?cs=1&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.28</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.28</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=NgAuZsijDbjj2roP0qCkqAo&s=promo&rt=hpbas.1385&zx=1714290744437&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.28</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.28</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwjIlu3VtuSFAxW4sVYBHVIQCaUQj-0KCB0..i&ei=NgAuZsijDbjj2roP0qCkqAo&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:NgAuZsijDbjj2roP0qCkqAo,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAAAQCAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAQQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oEJylKH2V5JVrdI9VdvMfNWoB8P4Q,_fmt:prog,_id:a3JU5b</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.28</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.28</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=NwAuZunGNePs2roP6pGZ4AI&s=async&astyp=hpba&ima=0&imn=0&mem=ujhs.6,tjhs.11,jhsl.4295,dm.8&nv=ne.1,feid.2f85e9b0-7dee-4555-b7d4-ff1c2f0c54f3&hp=&rt=ttfb.283,st.283,bs.27,aaft.285,acrt.285,art.285&zx=1714290744722&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=NgAuZsijDbjj2roP0qCkqAo&s=promo&rt=hpbas.1385,hpbarr.286&zx=1714290744723&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.19</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.19</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=syew,aLUfP?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAAAAAQAAAAAAwBAAQABAAKYCYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oFIxzsmWb5dEcXOLboe124qgLIvuQ/m=kMFpHd,sy8m,bm51tf?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/search?q=HPE&sca_esv=2f6a510e87352dee&source=hp&ei=NgAuZsijDbjj2roP0qCkqAo&iflsig=ANes7DEAAAAAZi4ORpENqwNloziLN_txTkIDHphVwito&ved=0ahUKEwjIlu3VtuSFAxW4sVYBHVIQCaUQ4dUDCA0&oq=HPE&gs_lp=Egdnd3Mtd2l6IgNIUEUyCxAuGIAEGNEDGMcBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAuGIAESIAQUABYBHAAeACQAQCYAd0BoAH8BKoBAzItM7gBDMgBAPgBAZgCA6AChgWYAwCSBwMyLTOgB-cZ&sclient=gws-wiz</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/</td>
+                        <td>Navigation</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.55</td>
+                        <td>3.23</td>
+                        <td>0</td>
+                        <td>4.1</td>
+                    </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAABQOAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=1/ed=1/rs=ACT90oGgBDIif9gBD6Wq1ITCGabEaE0xlw/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.24</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.24</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/ed=1/dg=2/rs=ACT90oGf88wnjgd2n_BLlVspY_FBO-RuhA/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf,FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe,KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO,fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO,fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=cdos,cr,hsm,jsa,mb4ZUb,d,csi,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.58</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.58</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.42</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.42</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/js/k=og.qtm.en_US.oT1FwJRCVC4.2019.O/rt=j/m=qabr,q_d,qcwid,qapid,qald,q_dg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTvBynad-nWEy1xIb9j1w6LpLOF6IQ</td>
+                            <td>Resource</td>
+                            <td>-0.89</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.58</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.69</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.gstatic.com/og/_/ss/k=og.qtm.T5bVtXo12IQ.L.W.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTssrVR1lBtzoy_MObv1DSp-vWG36A</td>
+                            <td>Resource</td>
+                            <td>-0.89</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.26</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.36</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.36</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=PgAuZqXXIvfn2roPlaOUGA&rt=wsrt.588,aft.658,afti.658,hst.50,prt.299&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=PgAuZqXXIvfn2roPlaOUGA&s=webhp&t=all&imn=10&ima=1&imad=0&imac=0&wh=750&aft=1&aftp=750&adh=&ime=1&imex=1&imeh=0&imeha=0&imehb=0&imea=0&imeb=0&imel=0&imed=0&scp=0&mem=ujhs.6,tjhs.11,jhsl.4295,dm.8&nv=ne.1,feid.2c858480-f940-45f1-bc8e-661e82d936ac&hp=&sys=hc.12&p=bs.true&rt=hst.50,prt.299,afti.658,aft.658,aftqf.659,xjses.662,xjsee.735,xjs.735,lcp.347,fcp.347,wsrt.588,cst.0,dnst.0,rqst.550,rspt.284,sslt.0,rqstt.322,unt.4,cstt.321,dit.910&zx=1714290752143&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/complete/search?q&cp=0&client=gws-wiz&xssi=t&gs_pcrt=2&hl=zh-CN&authuser=0&psi=PgAuZqXXIvfn2roPlaOUGA.1714290752158&dpr=1.25&nolsbt=1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.21</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/ck=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUgANhANQAjYEAQAAAgAAwBAAQABAADYPYAigAAEBAAMABAF4KBMQCJmAAAiQAJIQ5CAAgAgmGIBUAGIcAAAAQAIAAA4QYAABAxEgPIQAAIBABwAACwCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=1/exm=SNUn3,cEt90b,cdos,cr,csi,d,dtl0hd,eHDfl,hsm,jsa,mb4ZUb,qddgKe,sTsDMc/ed=1/dg=0/ujg=1/rs=ACT90oGzSzY2xPpJDCQwaOcyG-rI0VmBKw/ee=ALeJib:B8gLwd;AfeaP:TkrAjf;Afksuc:wMx0R;BMxAGc:E5bFse;BgS6mb:fidj5d;BjwMce:cXX2Wb;CxXAWb:YyRLvc;DM55c:imLrKe;DULqB:RKfG5c;Dkk6ge:wJqrrd;DpcR3d:zL72xf;EABSZ:MXZt9d;ESrPQc:mNTJvc;EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;EnlcNd:WeHg4;Erl4fe:FloWmf;F9mqte:UoRcbe;Fmv9Nc:O1Tzwc;G0KhTb:LIaoZ;G6wU6e:hPyGBb;GleZL:J1A7Od;HMDDWe:G8QUdb;HqeXPd:cmbnH;IBADCc:RYquRb;IoGlCf:b5lhvb;IsdWVc:qzxzOb;JXS8fb:Qj0suc;JbMT3:M25sS;JsbNhc:Xd8iUd;KOxcK:OZqGte;KQzWid:ZMKkN;KcokUb:KiuZBf;KeeMUb:HiPxjc;KpRAue:Tia57b;LBgRLc:XVMNvd;LEikZe:byfTOb,lsjVmc;LsNahb:ucGLNb;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Np8Qkd:Dpx6qc;Nyt6ic:jn2sGd;OgagBe:cNTe0;Oj465e:KG2eXe;OohIYe:mpEAQb;Pjplud:EEDORb,PoEs9b;Q1Ow7b:x5CSu;Q6C5kf:pfdZCe;QGR0gd:Mlhmy;R2kc8b:ALJqWb;R4IIIb:QWfeKf;R9Ulx:CR7Ufe;RDNBlf:zPRCJb;SLtqO:Kh1xYe;SMDL4c:fTfGO;SNUn3:ZwDk9d,x8cHvb;ShpF6e:N0pvGc;TxfV6d:YORN0b;U96pRd:FsR04;UDrY1c:eps46d;UVmjEd:EesRsb;UyG7Kb:wQd0G;V2HTTe:RolTY;VGRfx:VFqbr;VN6jIc:ddQyuf;VOcgDe:YquhTb;VsAqSb:PGf2Re;VxQ32b:k0XsBb;WCEKNd:I46Hvd;WDGyFe:jcVOxd;Wfmdue:g3MJlb;XUezZ:sa7lqb;YV5bee:IvPZ6d;YkQtAf:rx8ur;ZMvdv:PHFPjb;ZWEUA:afR4Cf;a56pNe:JEfCwb;aAJE9c:WHW6Ef;aZ61od:arTwJ;bDXwRe:UsyOtc;bFZ6gf:RsDQqe;bcPXSc:gSZLJb;cEt90b:ws9Tlc;cFTWae:gT8qnd;coJ8e:KvoW8;dIoSBb:ZgGg9b;dLlj2:Qqt3Gf;daB6be:lMxGPd;dtl0hd:lLQWFe;eBAeSb:Ck63tb;eBZ5Nd:VruDBd;eHDfl:ofjVkb;eO3lse:nFClrf;fWLTFc:TVBJbf;g8nkx:U4MzKc;gaub4:TN6bMe;gtVSi:ekUOYd;h3MYod:cEt90b;hK67qb:QWEO5b;heHB1:sFczq;hjRo6e:F62sG;hsLsYc:Vl118;iFQyKf:QIhFr,vfuNJf;imqimf:jKGL2e;io8t5d:sgY6Zb;jY0zg:Q6tNgc;k2Qxcb:XY51pe;kCQyJ:ueyPK;kMFpHd:OTA3Ae;kbAm9d:MkHyGd;lkq0A:JyBE3e;nAFL3:NTMZac,s39S4;oGtAuc:sOXFj;oSUNyd:fTfGO;oUlnpc:RagDlc;okUaUd:wItadb;p2tIDb:tp1Cx;pKJiXd:VCenhc;pNsl2d:j9Yuyc;pXdRYb:JKoKVe;pj82le:mg5CW;qZx2Fc:j0xrE;qaS3gd:yiLg6e;qavrXe:zQzcXe;qddgKe:d7YSfd,x4FYXe;rQSrae:C6D5Fc;sP4Vbe:VwDzFe;sTsDMc:kHVSUb;tH4IIe:Ymry6;tosKvd:ZCqP3;trZL0b:qY8PFe;uY49fb:COQbmf;uknmt:GkPrzb;uuQkY:u2V3ud;vGrMZ:lPJJ0c;vfVwPd:lcrkwe;w3bZCb:ZPGaIb;w4rSdf:XKiZ9;w9w86d:dt4g2b;wQlYve:aLUfP;wR5FRb:TtcOte;wV5Pjc:L8KGxe;whEZac:F4AmNb;xBbsrc:NEW1Qc;yGxLoc:FmAr0c;yxTchf:KUM7Z;z97YGf:oug9te;zOsCQe:Ko78Df;zaIgPb:Qtpxbd/m=B2qlPe,DhPYme,MpJwZc,NzU6V,UUJqVe,Wo3n8,aa,abd,async,epYOx,ms4mZb,mu,pHXghd,q0xTif,s39S4,sOXFj,sb_wiz,sf,sonic,spch,zGLm3b?xjs=s1</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.34</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.34</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/md=3/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/rs=ACT90oGf88wnjgd2n_BLlVspY_FBO-RuhA</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?atyp=i&biw=1488&bih=750&dpr=1.25&ei=PgAuZqXXIvfn2roPlaOUGA&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.2</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.2</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/ss/k=xjs.hd.2HVcjVx2jWM.L.W.O/am=ACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAABQOAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA/d=0/rs=ACT90oGgBDIif9gBD6Wq1ITCGabEaE0xlw/m=syk3?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGf88wnjgd2n_BLlVspY_FBO-RuhA/m=sy19g,P10Owf,syoc,sy182,sy184,gSZvdb,syts,syty,sytz,WlNQGd,syoa,syug,syui,nabPbb,syob,syod,syoe,syof,syoh,DPreE,syk3,sytr,sytt,CnSW2d,kQvlef,syuh,fXO0xe?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=i&ei=PgAuZqXXIvfn2roPlaOUGA&prm23=0&dt19=2&zx=1714290752516&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/client_204?cs=1&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=PgAuZqXXIvfn2roPlaOUGA&s=promo&rt=hpbas.1111&zx=1714290752517&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/async/hpba?vet=10ahUKEwil7urZtuSFAxX3s1YBHZURBQMQj-0KCB0..i&ei=PgAuZqXXIvfn2roPlaOUGA&opi=89978449&yv=3&cs=0&async=isImageHp:false,eventId:PgAuZqXXIvfn2roPlaOUGA,_k:xjs.hd.en.s-_9hhP1fG4.O,_am:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw,_basecss:%2Fxjs%2F_%2Fss%2Fk%3Dxjs.hd.2HVcjVx2jWM.L.W.O%2Fam%3DACsAAAAAAAAYAAAAAAAAAAAAAAAAABAAAAEAAAAAUAAIhAMQADYEAAAAAgAAgAAAQAAAABQOAACAAAEBAAMAAAEAAAAQCAGAAAiQAJIQZCAAgAgmGIBUAGIcAAAAQAIAAAAQIAABAxEgPIQAAIBABwAACQAAYAAhAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAUAAAAAAAAAAAAAAAAAIA%2Frs%3DACT90oGgBDIif9gBD6Wq1ITCGabEaE0xlw,_fmt:prog,_id:a3JU5b</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.23</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.23</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGf88wnjgd2n_BLlVspY_FBO-RuhA/m=syew,aLUfP?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=PwAuZv6CPL_Q2roPrPSCyAs&s=async&astyp=hpba&ima=0&imn=0&mem=ujhs.6,tjhs.11,jhsl.4295,dm.8&nv=ne.1,feid.2c858480-f940-45f1-bc8e-661e82d936ac&hp=&rt=ttfb.230,st.231,bs.27,aaft.238,acrt.238,art.238&zx=1714290752756&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/gen_204?atyp=csi&ei=PgAuZqXXIvfn2roPlaOUGA&s=promo&rt=hpbas.1111,hpbarr.239&zx=1714290752756&opi=89978449</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.18</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.18</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://www.google.com/xjs/_/js/k=xjs.hd.en.s-_9hhP1fG4.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQgAFAABQAgAAAQAAAAAAwBAAQABAADYPYAggAAEBAAMABAF4KBMACJgAAACAAIAQgCAAAAgAAABQAAAAAAAAAAAAAA4QQAAAAAAAAAAAAABABwAAAgCAYAAhAAAEAAAAIA9AcAAOUhAAAAAAAAAAAAAAIIAJgrkgAQUBEAAAAAAAAAAAAAAAqXRiYQw/d=0/dg=0/rs=ACT90oGf88wnjgd2n_BLlVspY_FBO-RuhA/m=kMFpHd,sy8m,bm51tf?xjs=s3</td>
+                            <td>Resource</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.14</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://ogs.google.com/widget/callout?prid=19015398&pgid=19011583&puid=3ac0456fbd77f36b&cce=1&dc=1&origin=https%3A%2F%2Fwww.google.com&cn=callout&pid=1&spid=538&hl=zh-CN</td>
+                            <td>Resource</td>
+                            <td>-2.59</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4.1</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>1.51</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.SCWmpDDGjPk.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo_Pl64J0IIHlj2zBtEJ3ZwdaJC3HA/cb=gapi.loaded_0</td>
+                            <td>Resource</td>
+                            <td>-2.61</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>3.29</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.67</td>
+                        </tr>
+                        <tr>
+                            <td class="text-justify">https://play.google.com/log?format=json&hasfast=true</td>
+                            <td>Resource</td>
+                            <td>-3.59</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4.11</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.52</td>
+                        </tr>
+                    <tr class="table-success">
+                        <td class="text-justify">https://www.google.com/search?q=DXC&sca_esv=2f6a510e87352dee&source=hp&ei=PgAuZqXXIvfn2roPlaOUGA&iflsig=ANes7DEAAAAAZi4OTnpWh0Ne8dREqsO1eh2vZe2sbJHb&ved=0ahUKEwil7urZtuSFAxX3s1YBHZURBQMQ4dUDCA0&oq=DXC&gs_lp=Egdnd3Mtd2l6IgNEWEMyBRAAGIAEMgUQABiABDIHEAAYgAQYCjIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIiRBQAFgEcAB4AJABAJgB4wGgAY0FqgEDMi0zuAEMyAEA-AEBmAIDoAKWBcICCxAuGIAEGNEDGMcBmAMAkgcDMi0zoAejGQ&sclient=gws-wiz</td>
+                        <td>Navigation</td>
+                        <td>0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-0.01</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+                
+    </div>
+
+    <div class="footer">
+        <p style="background-color:gray; color: white; text-align: right;"></p>
+    </div>
+    
+</body>
+
+</html>

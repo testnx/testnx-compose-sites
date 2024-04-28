@@ -34,8 +34,8 @@ And it is the last build for JDK8
       <description>1. Check out the quick start project from github [Git URL: https://github.com/testnx/CAH-quick-start-by-template.git]
 2. Two branches JDK8 Branch: jdk8+composite-automation-harnessV3.2.3
 Based on JDK8 and composite-automation-harnessV3.2.3 JDK11 Branch: main
-Based on JDK11 and composite-automation-harnessV3.6.0 or the latest version 2. Basic examples Basic tests in package &#39;tech.testnx.cah.quickstart.basic&#39;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
-3. Advanced examples Advanced tests in package &#39;tech.testnx.cah.quickstart.advanced&#39;, that demonstrate the usage of ECO Design Pattern.</description>
+Based on JDK11 and composite-automation-harnessV3.6.0 or the latest version 3. Basic examples Basic tests in package &#39;tech.testnx.cah.quickstart.basic&#39;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
+4. Advanced examples Advanced tests in package &#39;tech.testnx.cah.quickstart.advanced&#39;, that demonstrate the usage of ECO Design Pattern.</description>
     </item>
     <item>
       <title>User manual</title>
@@ -53,6 +53,18 @@ WebDriverEventListener listener= new AbstractWebDriverEventListener() {};
 driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();</description>
+    </item>
+    <item>
+      <title>Sample Reports</title>
+      <link>/composite-automation-harness/sample-reports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/composite-automation-harness/sample-reports/</guid>
+      <description>1. All in ONE report powered by VUE All in ONE Report by VUE
+2. Function Test Report powered by Bootstrap Function Test Report by Bootstrap
+3. Function Test Report powered by Excel Function Test Report by Excel
+4. Web UI Performance Report powered by Bootstrap Web UI Performance Report by Bootstrap
+5. Web UI Performance Report powered by Excel Web UI Performance Report by Excel
+6. Web API Performance Report powered by Bootstrap Web API Performance Report by Bootstrap</description>
     </item>
   </channel>
 </rss>
