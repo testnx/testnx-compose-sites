@@ -43,7 +43,7 @@ driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
 <meta itemprop="dateModified" content="2024-02-11T21:53:00+08:00" />
-<meta itemprop="wordCount" content="1289">
+<meta itemprop="wordCount" content="1365">
 <meta itemprop="keywords" content="at,tech," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="User manual"/>
 <meta name="twitter:description" content="1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
@@ -164,6 +164,7 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
       <ul>
         <li><a href="#1-download-and-set-up-the-at-dashboard-service">1. Download and set up the AT Dashboard service</a></li>
         <li><a href="#2-configure-the-endpoint-of-aggregation-service-of-at-dashboard-in-global-configure">2. Configure the endpoint of aggregation service of AT Dashboard in Global configure</a></li>
+        <li><a href="#3-two-automation-dashboard-types-are-available-bootstrap-and-vue_vuetify">3. Two Automation Dashboard types are available: BOOTSTRAP and VUE_VUETIFY</a></li>
       </ul>
     </li>
   </ul>
@@ -535,10 +536,25 @@ Log_Level=INFO
   public void testKnockBingByBrowser(String keywords, String result) {}
 </code></pre></li>
 <li>
-<p>Recorder: record test flow and status in report</p>
+<p>Recorder: record test flow and status during execution and show in report</p>
 <pre tabindex="0"><code>	 Recorder.log(String msg);
-  Recorder.log(Recordable rec);
+  Recorder.log(Recordable&lt; ? &gt; rec);
 </code></pre></li>
+<li>
+<p>Predefined record types: CommonRecord, ScreenshotRecord, AssertRecord, ActionRecord, StepRecord</p>
+<ul>
+<li>CommonRecord<br>
+Take a note</li>
+<li>ScreenshotRecord<br>
+Take a screenshot</li>
+<li>AssertRecord<br>
+It is generated automatically during invokde CahAssert methods, and save the assertion detail then show in report</li>
+<li>ActionRecord<br>
+It is generated automatically if use ECO mode, and save the action detail then show in report</li>
+<li>StepRecord<br>
+It is generated automatically if use ECO mode, and save the step detail then show in report</li>
+</ul>
+</li>
 <li>
 <p>Report type: CONSOLE, EXCEL, HTML_BOOTSTRAP, HTML_VUE_VUETIFY
 User can choose report types in global-config.properties. Report contains Test ID, Name, Description, Duration, Recording for each case, Errors, Exceptions, Logs and Screenshot for failed cases</p>
@@ -563,6 +579,8 @@ User can choose report types in global-config.properties. Report contains Test I
 <img src="/images/cah/html_vue_vuetify-report3.png" alt="html_vue_vuetify-report3" title="html_vue_vuetify report3">
 <img src="/images/cah/html_vue_vuetify-report4.png" alt="html_vue_vuetify-report4" title="html_vue_vuetify report4">
 <img src="/images/cah/html_vue_vuetify-report5.png" alt="html_vue_vuetify-report5" title="html_vue_vuetify report5">
+<img src="/images/cah/html_vue_vuetify-report10.png" alt="html_vue_vuetify-report9" title="html_vue_vuetify report10">
+<img src="/images/cah/html_vue_vuetify-report11.png" alt="html_vue_vuetify-report9" title="html_vue_vuetify report11">
 <img src="/images/cah/html_vue_vuetify-report6.png" alt="html_vue_vuetify-report6" title="html_vue_vuetify report6">
 <img src="/images/cah/html_vue_vuetify-report7.png" alt="html_vue_vuetify-report7" title="html_vue_vuetify report7">
 <img src="/images/cah/html_vue_vuetify-report8.png" alt="html_vue_vuetify-report8" title="html_vue_vuetify report8">

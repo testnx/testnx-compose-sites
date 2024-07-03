@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AT Dashboard on TestNX</title>
+    <title>AT Dashboard(Bootstrap) on TestNX</title>
     <link>/at-dashboard/</link>
-    <description>Recent content in AT Dashboard on TestNX</description>
+    <description>Recent content in AT Dashboard(Bootstrap) on TestNX</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="/at-dashboard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AT Dashboard(Vue and Vuetify)</title>
+      <link>/at-dashboard/dashboard_vue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/at-dashboard/dashboard_vue/</guid>
+      <description>It is alfa testing phase. AT dashboard(Vue and Vuetify) is the spring boot webapp, DB is sqlite and UI is based on Vue and veutify. Test results will be published automatically from multiple test execution nodes to AT dashboard service. User can view all test results by multiple filters and add comments into test cycle in AT dashboard. Then can delete test cycle or execute merge between multiple test cycles.</description>
+    </item>
     <item>
       <title>Next</title>
       <link>/at-dashboard/next/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/at-dashboard/next/</guid>
-      <description> First Rebuild front end with Vue and Vuetify Second Import Web API performance results Import Web UI performance results Third Add new dashboard for across multiple resources ? </description>
+      <description> First Rebuild front end with Vue and Vuetify (In progress) Second Import Web API performance results Import Web UI performance results Third Add new dashboard for across multiple resources ? </description>
     </item>
   </channel>
 </rss>

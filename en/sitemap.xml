@@ -11,14 +11,16 @@
     <loc>/cah-api-doc/</loc>
     <lastmod>2024-04-26T16:45:04+08:00</lastmod>
   </url><url>
+    <loc>/at-dashboard/dashboard_vue/</loc>
+  </url><url>
     <loc>/composite-automation-harness/install/</loc>
     <lastmod>2024-04-28T19:21:09+08:00</lastmod>
   </url><url>
-    <loc>/at-dashboard/next/</loc>
-    <lastmod>2023-12-02T17:32:53+08:00</lastmod>
-  </url><url>
     <loc>/composite-automation-harness/integration/</loc>
     <lastmod>2023-03-27T10:03:36+08:00</lastmod>
+  </url><url>
+    <loc>/at-dashboard/next/</loc>
+    <lastmod>2023-12-02T17:32:53+08:00</lastmod>
   </url><url>
     <loc>/composite-automation-harness/quickstart/</loc>
     <lastmod>2024-04-28T19:22:55+08:00</lastmod>
