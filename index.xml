@@ -115,7 +115,7 @@ The MIT License Copyright (c) 2009-2016 Stuart Knightley, David Duponchel, Franz
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/thanks/</guid>
       <description>As Composite-Automation-Harness is built on top of these greate open source projects, Thank you!
-TestNG Selenium Guice Appium AutoIT WinAppDriver Jexcelapi Jxls Jackson Jersey Apache Commons AssertJ JSCH SSHJ Putty SSHD Cglib freemarker Browsermob-core Asciitable Ascii-table Spring boot Bootstrap Vue Vuetify </description>
+TestNG Selenium Guice Appium AutoIT WinAppDriver Jexcelapi Jxls Jackson Jersey Apache Commons AssertJ JSCH SSHJ Putty SSHD Cglib freemarker Browsermob-core Asciitable Ascii-table Spring boot Bootstrap Vue Vuetify Hugo Hugo theme: Compose </description>
     </item>
   </channel>
 </rss>
