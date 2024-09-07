@@ -21,6 +21,8 @@ tech.testnx.cah.common.reports.annotations
 tech.testnx.cah.common.reports.perf
 tech.testnx.cah.common.retry
 tech.testnx.cah.common.security
+tech.testnx.cah.common.state
+tech.testnx.cah.common.templates
 tech.testnx.cah.common.tuple
 tech.testnx.cah.common.utils
 tech.testnx.cah.common.wait

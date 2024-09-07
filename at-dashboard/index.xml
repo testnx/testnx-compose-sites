@@ -19,7 +19,7 @@
       <link>/at-dashboard/next/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/at-dashboard/next/</guid>
-      <description> First Rebuild front end with Vue and Vuetify (In progress) Second Import Web API performance results Import Web UI performance results Third Add new dashboard for across multiple resources ? </description>
+      <description> First Rebuild front end with Vue and Vuetify (Done) Second Import Web API performance results (Pending) Import Web UI performance results (Pending) Third Add new dashboard for across multiple resources ? </description>
     </item>
   </channel>
 </rss>
