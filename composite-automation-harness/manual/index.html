@@ -43,7 +43,7 @@ driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
 <meta itemprop="dateModified" content="2024-09-07T22:15:03+08:00" />
-<meta itemprop="wordCount" content="1731">
+<meta itemprop="wordCount" content="1854">
 <meta itemprop="keywords" content="at,tech," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="User manual"/>
 <meta name="twitter:description" content="1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
@@ -198,14 +198,15 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
         <li><a href="#1-each-test-class-extends-from-abstracttest">1. Each test class extends from AbstractTest</a></li>
         <li><a href="#2-managed-webdriver">2. Managed WebDriver</a></li>
         <li><a href="#3-managed-restful-api-client">3. Managed RESTful API Client</a></li>
-        <li><a href="#4-test-data-management">4. Test Data Management</a></li>
-        <li><a href="#5-share-and-manage-the-state-across-tests-by-statemanager">5. Share and manage the state across tests by StateManager</a></li>
-        <li><a href="#6-template-test">6. Template test</a></li>
-        <li><a href="#7-network-tunnels-creation-and-deletion-by-jsch-sshj-sshd-putty">7. Network tunnels creation and deletion by JSCH, SSHJ, SSHD, PUTTY</a></li>
-        <li><a href="#8-native-logger">8. Native Logger</a></li>
-        <li><a href="#9-cah-assert">9. CAH Assert</a></li>
-        <li><a href="#10-test-reporting">10. Test reporting</a></li>
-        <li><a href="#11-eco-design-pattern">11. ECO Design Pattern</a></li>
+        <li><a href="#4-configure-the-path-of-resources-directory">4. Configure the path of resources directory</a></li>
+        <li><a href="#5-test-data-management">5. Test Data Management</a></li>
+        <li><a href="#6-share-and-manage-the-state-across-tests-by-statemanager">6. Share and manage the state across tests by StateManager</a></li>
+        <li><a href="#7-template-test">7. Template test</a></li>
+        <li><a href="#8-ssh-tunnel-creationdeletion-and-remote-execute-ssh-commands-by-jsch-sshj-sshd">8. SSH tunnel creation/deletion and remote execute SSH commands by JSCH, SSHJ, SSHD</a></li>
+        <li><a href="#9-native-logger">9. Native Logger</a></li>
+        <li><a href="#10-cah-assert">10. CAH Assert</a></li>
+        <li><a href="#11-test-reporting">11. Test reporting</a></li>
+        <li><a href="#12-eco-design-pattern">12. ECO Design Pattern</a></li>
       </ul>
     </li>
   </ul>
@@ -304,7 +305,14 @@ client.unregisterListener(listener);</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="4-test-data-management">4. Test Data Management</h3>
+<h3 id="4-configure-the-path-of-resources-directory">4. Configure the path of resources directory</h3>
+<p>CAH configs, data, drivers, logs, reports are stored in resources directory. Now it is possible to customize the path.</p>
+<ul>
+<li>Set up Environment Variable: <em><strong>CAH_HOME=Path</strong></em>;  the directory should contain <em><strong>resources</strong></em> directory</li>
+<li>Create <em><strong>cah-home</strong></em> directory which should contain <em><strong>resources</strong></em> directory</li>
+<li>Use current working directory with java code, which should contain <em><strong>resources</strong></em> directory</li>
+</ul>
+<h3 id="5-test-data-management">5. Test Data Management</h3>
 <ul>
 <li>
 <p>Test data type supported: JSON and XLS</p>
@@ -489,7 +497,7 @@ Encrypted test data by Utilities.securityUtility.encrypt() and save them in data
 <img src="/images/cah/secured-test-data.png" alt="secured-test-data" title="Secured test data"></p>
 </li>
 </ul>
-<h3 id="5-share-and-manage-the-state-across-tests-by-statemanager">5. Share and manage the state across tests by StateManager</h3>
+<h3 id="6-share-and-manage-the-state-across-tests-by-statemanager">6. Share and manage the state across tests by StateManager</h3>
 <p>When user need share or pass some state or varible across tests, StateManager will provide help.</p>
 <pre tabindex="0"><code>    @Test
     public void test1() {
@@ -508,7 +516,7 @@ Encrypted test data by Utilities.securityUtility.encrypt() and save them in data
             }
     	logger.info(&#34;End&#34;);
     }
-</code></pre><h3 id="6-template-test">6. Template test</h3>
+</code></pre><h3 id="7-template-test">7. Template test</h3>
 <p>Template test could be useful in API test. the API payload with the same schema will be used in multiple tests and environments.<br>
 CAH framework provides two two Template Composer: CAH-Composer and Freemarker.<br>
 The template files could be stored in both module folder and ennvironment folder, but the template files are higher priority in ennvironment folder.<br>
@@ -599,15 +607,30 @@ module-a --> templates-m-a(templates)
 		CahAssert.assertEquals(rootNode.path(&#34;age&#34;).asInt(), 20);
 		CahAssert.assertEquals(rootNode.path(&#34;isStudent&#34;).asBoolean(), true);
 	}
-</code></pre><h3 id="7-network-tunnels-creation-and-deletion-by-jsch-sshj-sshd-putty">7. Network tunnels creation and deletion by JSCH, SSHJ, SSHD, PUTTY</h3>
-<p>User can choose the provider in global-config.properties. Multiple network tunnels can be created in one machine and network tunnel life cycle is managed by test.</p>
-<pre tabindex="0"><code>#SSH Client: JSCH, SSHJ, SSHD, PUTTY  
+</code></pre><h3 id="8-ssh-tunnel-creationdeletion-and-remote-execute-ssh-commands-by-jsch-sshj-sshd">8. SSH tunnel creation/deletion and remote execute SSH commands by JSCH, SSHJ, SSHD</h3>
+<p>User can choose the provider in global-config.properties. Multiple network tunnels can be created in one machine and network tunnel life cycle is managed by test.<br>
+And support both user password and private key.</p>
+<pre tabindex="0"><code>#SSH Client: JSCH, SSHJ, SSHD 
 SSH_Client=JSCH
-</code></pre><pre tabindex="0"><code>    SshClient client = SshClientProvider.provide(sshServerHost, sshServerPort, userName, password);
-    client.setTunnel(localPort, remoteHost, remotePort);
-    client.unsetTunnel(localPort);
-    client.disconnect();
-</code></pre><h3 id="8-native-logger">8. Native Logger</h3>
+</code></pre><pre tabindex="0"><code>    	HasSshTunnel sshTunnel = SshClientProvider.provide(host, user, password);
+      //HasSshTunnel sshTunnel = SshClientProvider.provide(host, user, Paths.get(&#34;Path to private key&#34;));
+    	sshTunnel.connect();
+    	logger.info(&#34;SSH tunnel is started....&#34;);
+    	sshTunnel.setLocalPortForwarding(3000, &#34;100.10.150.60&#34;, 80);
+    	logger.info(&#34;SSH tunnel is stopped....&#34;);
+    	sshTunnel.unsetLocalPortForwarding(3000);
+    	sshTunnel.disconnect();
+</code></pre><pre tabindex="0"><code>    	HasSshExec sshExec = SshClientProvider.provide(host, user, password);
+      //HasSshTunnel sshTunnel = SshClientProvider.provide(host, user, Paths.get(&#34;Path to private key&#34;));
+    	sshExec.connect();
+    	logger.info(&#34;Execute the first command&#34;);
+    	String result = sshExec.executeCommand(&#34;cd ..; pwd; ls&#34;);
+    	logger.info(result);
+    	logger.info(&#34;Execute the second command&#34;);
+    	result = sshExec.executeCommand(&#34;ping -c 3 bing.com&#34;);
+    	logger.info(result);
+    	sshExec.disconnect();
+</code></pre><h3 id="9-native-logger">9. Native Logger</h3>
 <p>User can choose Logger Level(TRACE, DEBUG, INFO, WARN, ERROR) in global-config.properties</p>
 <ul>
 <li>Global Config
@@ -623,7 +646,7 @@ Log_Level=INFO
   	logger.error(&#34;&#34;);
 </code></pre></li>
 </ul>
-<h3 id="9-cah-assert">9. CAH Assert</h3>
+<h3 id="10-cah-assert">10. CAH Assert</h3>
 <ul>
 <li>CahAssert is 100% compatible with testNG Assert. Actually CahAssert is the delegate of testNG Assert. CahAssert saves all assert detail information into AssertRecord, which will be displayed in reports.</li>
 </ul>
@@ -646,7 +669,7 @@ Log_Level=INFO
     AssertRecord.Extra.setExtra(&#34;This is the second extra information for testCahAssert&#34;);
     CahAssert.assertEquals(actual , expected, &#34;The second extra information is available and saved into this assert&#34;);
   }
-</code></pre><h3 id="10-test-reporting">10. Test reporting</h3>
+</code></pre><h3 id="11-test-reporting">11. Test reporting</h3>
 <ul>
 <li>
 <p>Annotation for report:  @Description</p>
@@ -750,7 +773,7 @@ Recording all http activities for both Web UI test and Restful API test, finally
 </ul>
 </li>
 </ul>
-<h3 id="11-eco-design-pattern">11. ECO Design Pattern</h3>
+<h3 id="12-eco-design-pattern">12. ECO Design Pattern</h3>
 <ul>
 <li>Auto-detect automation accident and auto-retry at right place and right timing within a minimum scope, and no retry code in test</li>
 <li>Roles: Executor, Controller, Operator (ECO)</li>

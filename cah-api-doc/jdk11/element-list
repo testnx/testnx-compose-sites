@@ -13,7 +13,8 @@ tech.testnx.cah.common.listener
 tech.testnx.cah.common.log
 tech.testnx.cah.common.misc
 tech.testnx.cah.common.monitors
-tech.testnx.cah.common.net
+tech.testnx.cah.common.net.powershell
+tech.testnx.cah.common.net.ssh
 tech.testnx.cah.common.proxy
 tech.testnx.cah.common.reports
 tech.testnx.cah.common.reports.aggregation
@@ -27,6 +28,7 @@ tech.testnx.cah.common.tuple
 tech.testnx.cah.common.utils
 tech.testnx.cah.common.wait
 tech.testnx.cah.common.ws
+tech.testnx.cah.common.ws.json
 tech.testnx.cah.common.ws.listener
 tech.testnx.cah.data
 tech.testnx.cah.data.annotations
