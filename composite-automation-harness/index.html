@@ -127,7 +127,7 @@
         <li><a href="#3-add-the-composite-automation-harness-dependency-to-the-maven-project">3. Add the composite-automation-harness dependency to the maven project</a></li>
         <li><a href="#4-create-and-configure-the-directories-in-the-maven-project">4. Create and configure the directories in the maven project</a></li>
         <li><a href="#5-create-the-module-configure-files-and-module-data-files">5. Create the module configure files and module data files</a></li>
-        <li><a href="#6-download-chrome-driver-firefox-driver-or-ie-driver-to-target-directories">6. Download Chrome Driver, Firefox Driver or IE Driver to target directories.</a></li>
+        <li><a href="#6-framework-will-auto-detect-and-download-target-drivers-and-no-need-download-by-manual-anymore">6. Framework will auto-detect and download target drivers and no need download by manual anymore.</a></li>
         <li><a href="#7-create-and-set-up-the-global-configproperties">7. Create and set up the global-config.properties</a></li>
       </ul>
     </li>
@@ -202,6 +202,8 @@
 <h6 id="1-managed-webdriver-and-rest-client-with-rich-features-and-possibilities">1. Managed WebDriver and REST Client with rich features and possibilities</h6>
 <ul>
 <li>Web UI testing based on managed WebDriver with flexible listeners</li>
+<li>Auto detect and download target selenium Drivers into local environment with Selenium Manager integration</li>
+<li>Support both local and remote driver runing modes, it is easy to switch driver environment across local, grid and docker</li>
 <li>RESTful API testing based on managed REST Client with flexible listeners</li>
 <li>Both WebDriver and REST Client can be customized by user listeners to extend their capabilities</li>
 </ul>
@@ -222,7 +224,8 @@
 </ul>
 <h6 id="4-secure-network-connection-is-easy">4. Secure network connection is easy</h6>
 <ul>
-<li>Network tunnels creation and deletion are managed by framework with multiple providers: JSCH, SSHJ, SSHD, PUTTY</li>
+<li>Provide SSH remote execution and SSH tunnels life-cycle management</li>
+<li>Easy to swich SSH providers(JSCH, SSHJ, SSHD)</li>
 <li>Support the transaction in automation process</li>
 </ul>
 <h6 id="5-rich-report-typesconsole-xls-html-and-contentsfunction-result-ui-performance-and-api-performance">5. Rich report types(Console, XLS, HTML) and contents(function result, UI performance and API performance)</h6>

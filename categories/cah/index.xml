@@ -15,7 +15,7 @@
       <description>1. Install JDK8/11/17 2. Install Maven3+ 3. Add the composite-automation-harness dependency to the maven project JDK8 Based on testng_7.5, selenium_3.141.59, jersey_2.25.1, jackson_2.13.4.2, freemarker_2.3.30, guice_4.2.2
 And it is the last build for JDK8
 1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.2.3&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK11 Based on testng_7.8, selenium_4.16.1, jersey_2.41, jackson_2.13.4.2, freemarker_2.3.32, guice_7.0.0 And it is main development branch for now.
-1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.12.0&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK17 Pre-research is done, it is coming soon.</description>
+1&amp;lt;dependency&amp;gt; 2 &amp;lt;groupId&amp;gt;tech.testnx.cah&amp;lt;/groupId&amp;gt; 3 &amp;lt;artifactId&amp;gt;composite-automation-harness&amp;lt;/artifactId&amp;gt; 4 &amp;lt;version&amp;gt;3.16.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; JDK17 Pre-research is done, it is coming soon.</description>
     </item>
     <item>
       <title>Integration with AT Dashboard</title>
@@ -34,7 +34,7 @@ And it is the last build for JDK8
       <description>1. Check out the quick start project from github [Git URL: https://github.com/testnx/CAH-quick-start-by-template.git]
 2. Two branches JDK8 Branch: jdk8+composite-automation-harnessV3.2.3
 Based on JDK8 and composite-automation-harnessV3.2.3 JDK11 Branch: main
-Based on JDK11 and composite-automation-harnessV3.7.0 or the latest version 3. Basic examples Basic tests in package &#39;tech.testnx.cah.quickstart.basic&#39;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
+Based on JDK11 and composite-automation-harnessV3.16.2 or the latest version 3. Basic examples Basic tests in package &#39;tech.testnx.cah.quickstart.basic&#39;, that demonstrate the usage of Web UI, Restful API, test data, environments, configurations and reporting.
 4. Advanced examples Advanced tests in package &#39;tech.testnx.cah.quickstart.advanced&#39;, that demonstrate the usage of ECO Design Pattern.</description>
     </item>
     <item>

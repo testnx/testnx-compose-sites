@@ -28,7 +28,7 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/composite-automation-harness/manual/" /><meta property="article:section" content="composite-automation-harness" />
 
-<meta property="article:modified_time" content="2024-09-07T22:15:03+08:00" />
+<meta property="article:modified_time" content="2024-10-02T17:08:45+08:00" />
 
 <meta itemprop="name" content="User manual">
 <meta itemprop="description" content="1. Each test class extends from AbstractTest Test class extends tech.testnx.cah.AbstractTest Implements method getModuleName() 2. Managed WebDriver Get a default webdriver specified in global-config.properties
@@ -42,7 +42,7 @@ WebDriverEventListener listener= new AbstractWebDriverEventListener() {};
 driver = registerDriverListener(driver, listener);
 driver = unregisterDriverListener(driver, listener);
 Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
-<meta itemprop="dateModified" content="2024-09-07T22:15:03+08:00" />
+<meta itemprop="dateModified" content="2024-10-02T17:08:45+08:00" />
 <meta itemprop="wordCount" content="1854">
 <meta itemprop="keywords" content="at,tech," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="User manual"/>
@@ -162,7 +162,7 @@ Managed the WebDrivers by pool WebDriver driver1 = requestWebDriver();">
         <li><a href="#3-add-the-composite-automation-harness-dependency-to-the-maven-project">3. Add the composite-automation-harness dependency to the maven project</a></li>
         <li><a href="#4-create-and-configure-the-directories-in-the-maven-project">4. Create and configure the directories in the maven project</a></li>
         <li><a href="#5-create-the-module-configure-files-and-module-data-files">5. Create the module configure files and module data files</a></li>
-        <li><a href="#6-download-chrome-driver-firefox-driver-or-ie-driver-to-target-directories">6. Download Chrome Driver, Firefox Driver or IE Driver to target directories.</a></li>
+        <li><a href="#6-framework-will-auto-detect-and-download-target-drivers-and-no-need-download-by-manual-anymore">6. Framework will auto-detect and download target drivers and no need download by manual anymore.</a></li>
         <li><a href="#7-create-and-set-up-the-global-configproperties">7. Create and set up the global-config.properties</a></li>
       </ul>
     </li>
@@ -270,7 +270,7 @@ driver = unregisterDriverListener(driver, listener);</p>
 <blockquote>
 <p>WebDriver driver1 = requestWebDriver();<br>
 WebDriver driver2 = this.requestWebDriver(BrowserType.CHROME);<br>
-WebDriver driver3 = this.requestWebDriver(BrowserType.FIREFOX64);<br>
+WebDriver driver3 = this.requestWebDriver(BrowserType.FIREFOX);<br>
 releaseWebDriver(driver1);<br>
 releaseWebDriver(driver2);<br>
 releaseWebDriver(driver3);</p>
