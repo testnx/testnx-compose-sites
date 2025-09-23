@@ -256,7 +256,7 @@ WebDriver driver = newIeDriver();</p>
 </li>
 <li>
 <p>Customized the WebDriver by listeners
-<img src="/images/cah/WebDriverListeners.png" alt="WebDriverListeners" title="WebDriver Listeners"></p>
+<img src="/images/cah/WebDriverListeners.jpg" alt="WebDriverListeners" title="WebDriver Listeners"></p>
 <blockquote>
 <p>WebDriver driver = getDriver();<br>
 WebDriverEventListener listener= new AbstractWebDriverEventListener() {};<br>
@@ -266,7 +266,7 @@ driver = unregisterDriverListener(driver, listener);</p>
 </li>
 <li>
 <p>Managed the WebDrivers by pool
-<img src="/images/cah/DriverPool.png" alt="DriverPool" title="WebDriver Pool"></p>
+<img src="/images/cah/DriverPool.jpg" alt="DriverPool" title="WebDriver Pool"></p>
 <blockquote>
 <p>WebDriver driver1 = requestWebDriver();<br>
 WebDriver driver2 = this.requestWebDriver(BrowserType.CHROME);<br>
@@ -281,7 +281,7 @@ releaseWebDriver(driver3);</p>
 <ul>
 <li>
 <p>Get a RestClient and RestClientV2<br>
-<img src="/images/cah/RestClient.png" alt="RestClient" title="RestClient"></p>
+<img src="/images/cah/RestClient.jpg" alt="RestClient" title="RestClient"></p>
 <blockquote>
 <p>RestClient client = RestClient.newInstance(&quot;http://endpoint/api/&quot;);<br>
 RestfulResponse response = client.doGet();<br>
@@ -296,7 +296,7 @@ Assert.assertEquals(response.getJsonParser().getIntValue(&quot;data[2].employee_
 </li>
 <li>
 <p>Customized the RestClient by listeners
-<img src="/images/cah/RestClientListeners.png" alt="RestClientListeners" title="RestClient Listeners"></p>
+<img src="/images/cah/RestClientListeners.jpg" alt="RestClientListeners" title="RestClient Listeners"></p>
 <blockquote>
 <p>RestClientV2 client = RestClientV2.newInstance();<br>
 RestClientListener listener = new RestClientListener() {};<br>
@@ -364,7 +364,7 @@ public void testDataMinus(String description, int first, int second, int result)
 }
 </code></pre></li>
 <li>xls
-<img src="/images/cah/xls-data.png" alt="xls-data" title="XLS data"></li>
+<img src="/images/cah/xls-data.jpg" alt="xls-data" title="XLS data"></li>
 </ul>
 </li>
 <li>
@@ -403,7 +403,7 @@ public void test3(String testname, JsonNode node) {
 </code></pre></li>
 <li>
 <p>XLS(JsonNode)
-<img src="/images/cah/xls-JsonNode.png" alt="xls-JsonNode" title="XLS JsonNode"></p>
+<img src="/images/cah/xls-JsonNode.jpg" alt="xls-JsonNode" title="XLS JsonNode"></p>
 </li>
 <li>
 <p>Data Bean(TransformableTestDataBean)</p>
@@ -460,7 +460,7 @@ public void test3(String testname, JsonNode node) {
 </code></pre></li>
 <li>
 <p>XLS(TransformableTestDataBean)
-<img src="/images/cah/xls-TransformableTestDataBean.png" alt="xls-TransformableTestDataBean" title="XLS TransformableTestDataBean"></p>
+<img src="/images/cah/xls-TransformableTestDataBean.jpg" alt="xls-TransformableTestDataBean" title="XLS TransformableTestDataBean"></p>
 </li>
 </ul>
 </li>
@@ -488,13 +488,13 @@ If one test has multiple data groups, the test will be automatically executed mu
     ]
 </code></pre></li>
 <li>XLS
-<img src="/images/cah/xls-datadriven.png" alt="xls-datadriven" title="XLS data driven"></li>
+<img src="/images/cah/xls-datadriven.jpg" alt="xls-datadriven" title="XLS data driven"></li>
 </ul>
 </li>
 <li>
 <p>Auto-Decrypt secured test data
 Encrypted test data by Utilities.securityUtility.encrypt() and save them in data file, then the test data will be auto-decrypted for test<br>
-<img src="/images/cah/secured-test-data.png" alt="secured-test-data" title="Secured test data"></p>
+<img src="/images/cah/secured-test-data.jpg" alt="secured-test-data" title="Secured test data"></p>
 </li>
 </ul>
 <h3 id="6-share-and-manage-the-state-across-tests-by-statemanager">6. Share and manage the state across tests by StateManager</h3>
@@ -708,33 +708,33 @@ User can choose report types in global-config.properties. Report contains Test I
 </code></pre><ul>
 <li>
 <p>Console report
-<img src="/images/cah/console-report.png" alt="console-report" title="console report"></p>
+<img src="/images/cah/console-report.jpg" alt="console-report" title="console report"></p>
 </li>
 <li>
 <p>HTML_BOOTSTRAP report (ONE page)
-<img src="/images/cah/html_bootstrap-report.png" alt="html_bootstrap-report" title="html_bootstrap report">
-<img src="/images/cah/html_bootstrap-report2.png" alt="html_bootstrap-report2" title="html_bootstrap report2">
-<img src="/images/cah/html_bootstrap-report3.png" alt="html_bootstrap-report3" title="html_bootstrap report3">
-<img src="/images/cah/html_bootstrap-report4.png" alt="html_bootstrap-report4" title="html_bootstrap report4"></p>
+<img src="/images/cah/html_bootstrap-report.jpg" alt="html_bootstrap-report" title="html_bootstrap report">
+<img src="/images/cah/html_bootstrap-report2.jpg" alt="html_bootstrap-report2" title="html_bootstrap report2">
+<img src="/images/cah/html_bootstrap-report3.jpg" alt="html_bootstrap-report3" title="html_bootstrap report3">
+<img src="/images/cah/html_bootstrap-report4.jpg" alt="html_bootstrap-report4" title="html_bootstrap report4"></p>
 </li>
 <li>
 <p>HTML_VUE_VUETIFY report (all in ONE page)
-<img src="/images/cah/html_vue_vuetify-report.png" alt="html_vue_vuetify-report" title="html_vue_vuetify report">
-<img src="/images/cah/html_vue_vuetify-report2.png" alt="html_vue_vuetify-report2" title="html_vue_vuetify report2">
-<img src="/images/cah/html_vue_vuetify-report3.png" alt="html_vue_vuetify-report3" title="html_vue_vuetify report3">
-<img src="/images/cah/html_vue_vuetify-report4.png" alt="html_vue_vuetify-report4" title="html_vue_vuetify report4">
-<img src="/images/cah/html_vue_vuetify-report5.png" alt="html_vue_vuetify-report5" title="html_vue_vuetify report5">
-<img src="/images/cah/html_vue_vuetify-report10.png" alt="html_vue_vuetify-report9" title="html_vue_vuetify report10">
-<img src="/images/cah/html_vue_vuetify-report11.png" alt="html_vue_vuetify-report9" title="html_vue_vuetify report11">
-<img src="/images/cah/html_vue_vuetify-report6.png" alt="html_vue_vuetify-report6" title="html_vue_vuetify report6">
-<img src="/images/cah/html_vue_vuetify-report7.png" alt="html_vue_vuetify-report7" title="html_vue_vuetify report7">
-<img src="/images/cah/html_vue_vuetify-report8.png" alt="html_vue_vuetify-report8" title="html_vue_vuetify report8">
-<img src="/images/cah/html_vue_vuetify-report9.png" alt="html_vue_vuetify-report9" title="html_vue_vuetify report9"></p>
+<img src="/images/cah/html_vue_vuetify-report.jpg" alt="html_vue_vuetify-report" title="html_vue_vuetify report">
+<img src="/images/cah/html_vue_vuetify-report2.jpg" alt="html_vue_vuetify-report2" title="html_vue_vuetify report2">
+<img src="/images/cah/html_vue_vuetify-report3.jpg" alt="html_vue_vuetify-report3" title="html_vue_vuetify report3">
+<img src="/images/cah/html_vue_vuetify-report4.jpg" alt="html_vue_vuetify-report4" title="html_vue_vuetify report4">
+<img src="/images/cah/html_vue_vuetify-report5.jpg" alt="html_vue_vuetify-report5" title="html_vue_vuetify report5">
+<img src="/images/cah/html_vue_vuetify-report10.jpg" alt="html_vue_vuetify-report9" title="html_vue_vuetify report10">
+<img src="/images/cah/html_vue_vuetify-report11.jpg" alt="html_vue_vuetify-report9" title="html_vue_vuetify report11">
+<img src="/images/cah/html_vue_vuetify-report6.jpg" alt="html_vue_vuetify-report6" title="html_vue_vuetify report6">
+<img src="/images/cah/html_vue_vuetify-report7.jpg" alt="html_vue_vuetify-report7" title="html_vue_vuetify report7">
+<img src="/images/cah/html_vue_vuetify-report8.jpg" alt="html_vue_vuetify-report8" title="html_vue_vuetify report8">
+<img src="/images/cah/html_vue_vuetify-report9.jpg" alt="html_vue_vuetify-report9" title="html_vue_vuetify report9"></p>
 </li>
 <li>
 <p>EXCEL report
-<img src="/images/cah/xls-report.png" alt="xls-report" title="xls report">
-<img src="/images/cah/xls-report2.png" alt="xls-report2" title="xls report2"></p>
+<img src="/images/cah/xls-report.jpg" alt="xls-report" title="xls report">
+<img src="/images/cah/xls-report2.jpg" alt="xls-report2" title="xls report2"></p>
 </li>
 </ul>
 </li>
@@ -748,26 +748,26 @@ User can choose monitor providers in global-config.properties</p>
 </code></pre><ul>
 <li>Http_Archiver_Monitor<br>
 Recording all http activities for both Web UI test and Restful API test, finally http archive file is generated like 'CAH_AT_Performance.har'. Then view it by http archive viewer<br>
-<img src="/images/cah/http-archive-viewer.png" alt="http-archive-viewer" title="http archive viewer"></li>
+<img src="/images/cah/http-archive-viewer.jpg" alt="http-archive-viewer" title="http archive viewer"></li>
 <li>Web_API_Perf_Monitor
 <ul>
 <li>Console Web API Performance Report
-<img src="/images/cah/console-report-web-api-perf.png" alt="console-report-web-api-perf" title="Web API Performance Console Report"></li>
+<img src="/images/cah/console-report-web-api-perf.jpg" alt="console-report-web-api-perf" title="Web API Performance Console Report"></li>
 <li>HTML Web API Performance Report
-<img src="/images/cah/html_bootstrap-report-web-api-perf.png" alt="html-report-web-api-perf" title="Web API Performance HTML Report"></li>
+<img src="/images/cah/html_bootstrap-report-web-api-perf.jpg" alt="html-report-web-api-perf" title="Web API Performance HTML Report"></li>
 <li>XLS Web API Performance Report
-<img src="/images/cah/xls-report-web-api-perf.png" alt="xls-report-web-api-perf" title="Web API Performance XLS Report"></li>
+<img src="/images/cah/xls-report-web-api-perf.jpg" alt="xls-report-web-api-perf" title="Web API Performance XLS Report"></li>
 </ul>
 </li>
 <li>Web_UI_Perf_Monitor
 <ul>
 <li>Console Web UI Performance Report
-<img src="/images/cah/console-report-web-ui-perf.png" alt="console-report-web-ui-perf" title="Web API Performance Console Report"></li>
+<img src="/images/cah/console-report-web-ui-perf.jpg" alt="console-report-web-ui-perf" title="Web API Performance Console Report"></li>
 <li>HTML Web UI Performance Report
-<img src="/images/cah/html_bootstrap-report-web-ui-perf.png" alt="html-report-web-ui-perf" title="Web UI Performance HTML Report"></li>
+<img src="/images/cah/html_bootstrap-report-web-ui-perf.jpg" alt="html-report-web-ui-perf" title="Web UI Performance HTML Report"></li>
 <li>XLS Web UI Performance Report
-<img src="/images/cah/xls-report-web-ui-perf.png" alt="xls-report-web-ui-perf" title="Web UI Performance XLS Report"> <br>
-<img src="/images/cah/xls-report-web-ui-perf2.png" alt="xls-report-web-ui-perf2" title="Web UI Performance XLS Report2"></li>
+<img src="/images/cah/xls-report-web-ui-perf.jpg" alt="xls-report-web-ui-perf" title="Web UI Performance XLS Report"> <br>
+<img src="/images/cah/xls-report-web-ui-perf2.jpg" alt="xls-report-web-ui-perf2" title="Web UI Performance XLS Report2"></li>
 </ul>
 </li>
 </ul>
@@ -785,9 +785,9 @@ Recording all http activities for both Web UI test and Restful API test, finally
 </ul>
 </li>
 <li>ECO Model<br>
-<img src="/images/cah/ECO-Model.png" alt="ECO-Model" title="ECO Model"></li>
+<img src="/images/cah/ECO-Model.jpg" alt="ECO-Model" title="ECO Model"></li>
 <li>ECO Flow<br>
-<img src="/images/cah/ECO-Flow2.png" alt="ECO-Flow" title="ECO Flow"></li>
+<img src="/images/cah/ECO-Flow2.jpg" alt="ECO-Flow" title="ECO Flow"></li>
 <li>Example code
 <ul>
 <li>Executor</li>
